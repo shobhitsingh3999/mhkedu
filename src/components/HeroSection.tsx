@@ -39,48 +39,52 @@ const partnerLogos = [
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full overflow-hidden bg-[#0F4C5C] pt-16 pb-8">
-      {/* Background Video */}
-      <div className="absolute inset-0 w-full h-full overflow-hidden">
+    <section className="relative w-full overflow-hidden  pt-16 pb-8">
+      {/* Background Video - Fixed to cover 80% of screen height */}
+      <div className="absolute inset-0 w-full h-[80vh] overflow-hidden">
         <video
           autoPlay
           loop
           muted
+          playsInline
           className="absolute inset-0 w-full h-full object-cover"
           poster="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=2074&auto=format&fit=crop"
         >
+          {/* Replace with your own video URL that isn't expired */}
           <source
-            src="https://videocdn.cdnpk.net/videos/08d4c5c1-2f37-4b13-bdc1-fda785a66c50/horizontal/previews/clear/large.mp4?token=exp=1741853515~hmac=a4f1357b21ea12047326c4262561ee5940ac03524628360cd9a7b18ce3b35969"
+            src="https://videocdn.cdnpk.net/videos/ec09c2b8-2353-4aec-bc59-2bdc0502d1b8/horizontal/previews/clear/large.mp4?token=exp=1742029165~hmac=ae78db857af579c911a91c6dad04e75804723a76459c131856ba32808b2d2c8e"
             type="video/mp4"
           />
+          {/* Fallback image if video fails to load */}
+          Your browser does not support the video tag.
         </video>
-        {/* Overlay Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0F4C5C]/40 to-[#0F4C5C]/20"></div>
+        {/* Overlay Gradient - Adjusted for better visibility */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0F4C5C]/60 to-[#0F4C5C]/40"></div>
         {/* Decorative Elements */}
         <div className="absolute bottom-0 right-0 w-32 h-32 bg-[#9FE870] opacity-40 blur-2xl" />
         <div className="absolute top-1/4 right-1/4 w-24 h-24 bg-[#0F4C5C] opacity-20 blur-2xl" />
       </div>
 
-      <div className="container relative z-10 mx-auto px-4 h-screen flex flex-col justify-center items-center">
+      <div className="container relative z-10 mx-auto px-4 h-[80vh] flex flex-col justify-center items-center">
         <div className="text-center max-w-3xl mx-auto">
           {/* Centered Content */}
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-[3.5rem] leading-[1.1] lg:text-[4.5rem] font-medium tracking-tight text-white text-center"
+            className="text-[3.5rem] leading-[1.1] lg:text-[5.5rem] font-medium tracking-tight text-[#9FE870] text-center"
           >
-            Your Partner for{" "}
-            <span className="block">Financial Success</span>
+            Your Gateway to{" "}
+            <span className="block">a Global Future</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="mt-6 text-lg text-slate-200 max-w-2xl mx-auto text-center"
+            className="mt-6 text-lg text-slate-200 max-w-2xl mx-auto text-center "
           >
-            Lorem ipsum dolor sit amet, vim id assentior moderatius, neligendis iuvaret est per et inani alienum.
+           Shaping Futures, One Dream at a Time – Your Trusted Partner for Study Visas, Visitor Visas and Language Coaching Worldwide.
           </motion.p>
 
           <motion.div

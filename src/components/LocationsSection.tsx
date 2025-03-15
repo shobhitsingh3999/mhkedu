@@ -5,16 +5,16 @@ import Link from "next/link";
 export default function LocationsSection() {
   const locations = [
     {
-      city: "New York",
+      city: "Canada",
       address: "17th St, New York, NY 10011",
       phone: "+ 99 11 123 456; + 99 11 123 456",
       email: "startpro@example.com",
       bgColor: "#D9E6EA",
-      bgImage: "url('https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?q=80&w=1000')",
+      bgImage: "url('https://images.unsplash.com/photo-1517935706615-2717063c2225?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2FuYWRhfGVufDB8fDB8fHww')",
       triangleColor: "#D9E6EA",
     },
     {
-      city: "London",
+      city: "United Kingdom (UK)",
       address: "Whitcomb Ct, London W1D 6BP",
       phone: "+ 99 11 123 456; + 99 11 123 456",
       email: "startpro@example.com",
@@ -23,16 +23,16 @@ export default function LocationsSection() {
       triangleColor: "#0B3142",
     },
     {
-      city: "Amsterdam",
+      city: "Austrailia",
       address: "Waterlooplein 1, 1011 NV",
       phone: "+ 99 11 123 456; + 99 11 123 456",
       email: "startpro@example.com",
       bgColor: "#D9E6EA",
-      bgImage: "url('https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?q=80&w=1000')",
+      bgImage: "url('https://abroaddreamsconsultant.com/wp-content/uploads/2024/11/pexels-steve-tingley-2172304-15009437-scaled.jpg')",
       triangleColor: "#D9E6EA",
     },
     {
-      city: "Zurich",
+      city: "Europe",
       address: "Seestrasse 21, Zurich, CH",
       phone: "+ 99 11 123 456; + 99 11 123 456",
       email: "startpro@example.com",
@@ -40,11 +40,29 @@ export default function LocationsSection() {
       bgImage: "url('https://images.unsplash.com/photo-1515488764276-beab7607c1e6?q=80&w=1000')",
       triangleColor: "#0B3142",
     },
+    {
+      city: "USA",
+      address: "Waterlooplein 1, 1011 NV",
+      phone: "+ 99 11 123 456; + 99 11 123 456",
+      email: "startpro@example.com",
+      bgColor: "#D9E6EA",
+      bgImage: "url('https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?q=80&w=1000')",
+      triangleColor: "#D9E6EA",
+    },
+    {
+      city: "New Zealand",
+      address: "Seestrasse 21, Zurich, CH",
+      phone: "+ 99 11 123 456; + 99 11 123 456",
+      email: "startpro@example.com",
+      bgColor: "#0B3142",
+      bgImage: "url('https://plus.unsplash.com/premium_photo-1682449558329-b04c01db4d42?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fHw%3D')",
+      triangleColor: "#0B3142",
+    },
   ];
 
   return (
     <section className="w-full">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {locations.map((location, index) => (
           <LocationCard key={index} location={location} />
         ))}

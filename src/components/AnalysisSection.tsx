@@ -39,7 +39,7 @@ export default function AnalysisSection() {
         {/* Right side - Content */}
         <div className="text-white max-w-xl">
           <h2 className="text-[56px] font-light mb-16 leading-[1.2]">
-            In-depth <span className="text-[#9FE870] font-normal">financial<br/>performance</span> analysis
+          Excellence in <span className="text-[#9FE870] font-normal">Visa Services</span>
           </h2>
 
           <div className="space-y-6 mb-16">

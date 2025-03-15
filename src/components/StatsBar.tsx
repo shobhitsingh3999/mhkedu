@@ -1,15 +1,19 @@
 const stats = [
   {
-    value: "12 months",
-    description: "Revenues brought forward"
+    value: "8+",
+    description: "Visa Categories"
   },
   {
-    value: "60%",
-    description: "Average company growth"
+    value: "940+",
+    description: "Visa Applications"
   },
   {
-    value: "13 industries",
-    description: "We've got you covered"
+    value: "940+",
+    description: "Visa Applications"
+  },
+  {
+    value: "4.8",
+    description: "Reviews"
   }
 ];
 

@@ -93,11 +93,11 @@ export default function TestimonialsSection() {
                 Speak for Themselves
               </h2>
               <p className="text-lg text-white/70 max-w-[480px] mb-12">
-                Usu no voluptaria omittantur persequeris, quaeque vituperata, ferri possit.
+              MHK Consultants turned my relocation dream into reality with their tailored guidance and seamless immigration assistance.
               </p>
-              <button className="text-white border border-white/20 rounded-full px-8 py-4 hover:bg-white/10 transition-colors text-sm">
+              {/* <button className="text-white border border-white/20 rounded-full px-8 py-4 hover:bg-white/10 transition-colors text-sm">
                 View all testimonials
-              </button>
+              </button> */}
             </div>
 
             {/* Right content */}
