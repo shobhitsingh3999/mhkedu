@@ -20,9 +20,7 @@ export default function DemoPage() {
       <HeroSection />
 
       {/* Stats Section */}
-      <div className="-mt-50 relative z-10">
         <StatsSection />
-      </div>
 
       {/* Features Section */}
       <FeaturesSection />
@@ -32,7 +30,7 @@ export default function DemoPage() {
       {/* Locations Section */}
 
       {/* Analysis Section */}
-      <AnalysisSection />
+      {/* <AnalysisSection /> */}
       <LocationsSection />
 
       {/* Future Section */}

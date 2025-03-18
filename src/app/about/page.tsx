@@ -3,163 +3,153 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import FooterSection from "@/components/FooterSection";
-import { ArrowRight, Users, Target, Award, ChevronRight } from "lucide-react";
+import { ArrowRight, Users, Target, Award, ChevronRight, Check } from "lucide-react";
+import AnalysisSection from "@/components/AnalysisSection";
 
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-[#0F4C5C] py-32 overflow-hidden">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="inline-block px-4 py-2 bg-[#9FE870]/10 rounded-full border border-[#9FE870]/20 text-[#9FE870] mb-6"
-            >
-              Welcome to StartPro
-            </motion.div>
-            <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-5xl md:text-7xl font-semibold text-white mb-8 leading-tight"
-            >
-              Transforming Ideas into{" "}
-              <span className="text-[#9FE870]">Digital Reality</span>
-            </motion.h1>
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-xl text-white/80 mb-12 leading-relaxed"
-            >
-              We're a team of passionate innovators dedicated to creating exceptional digital experiences that drive business growth and transform industries.
-            </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-            >
-              <Button className="bg-[#9FE870] hover:bg-[#9FE870]/90 text-[#0F4C5C] px-8 py-6 text-lg rounded-full group">
-                Get Started
-                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-              </Button>
-            </motion.div>
-          </div>
-        </div>
-        {/* Background Pattern */}
-        <div className="absolute inset-0 w-full h-full">
-          <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1/2 h-[600px] bg-[#9FE870]/5 blur-3xl rounded-l-full"></div>
-          <div className="absolute right-20 top-20 w-72 h-72 bg-[#9FE870]/10 rounded-full"></div>
-          <div className="absolute left-0 bottom-0 w-96 h-96 bg-[#0B3142] rounded-tr-full"></div>
-        </div>
-      </section>
-
+    <AnalysisSection/>
       {/* Values Section */}
-      <section className="py-32 bg-white relative">
-        <div className="container mx-auto px-4">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center max-w-2xl mx-auto mb-20"
-          >
-            <h2 className="text-4xl font-semibold text-[#0F4C5C] mb-6">Our Core Values</h2>
-            <p className="text-lg text-[#0F4C5C]/70">Guided by strong principles, we deliver exceptional results that exceed expectations and drive meaningful impact.</p>
-          </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="bg-[#E5F9E0] p-8 rounded-2xl group hover:bg-[#0F4C5C] transition-colors duration-300"
-            >
-              <div className="bg-[#0F4C5C] group-hover:bg-[#9FE870] w-14 h-14 rounded-xl flex items-center justify-center mb-6 transition-colors duration-300">
-                <Target className="w-7 h-7 text-white group-hover:text-[#0F4C5C]" />
+<section className="py-20 bg-white">
+      <div className="container mx-auto px-4">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* Left side - Content */}
+          <div>
+            <div className="mb-6">
+              <h2 className="text-4xl md:text-5xl font-light text-[#0F4C5C] mb-4">
+                Our <span className="text-[#9FE870] font-normal">Journey</span>
+              </h2>
+              <div className="w-20 h-1 bg-[#F6B84C]"></div>
+            </div>
+            
+            <div className="space-y-6 text-gray-700">
+              <p>
+                Our journey began in 2014 with a vision to transform the study abroad experience for Indian students. What started as a small consulting office in Delhi has now grown into a trusted name in international education consultancy across the country.
+              </p>
+              
+              <p>
+                In our early days, we focused on providing visa assistance for students aspiring to study in Canada and Australia. As we witnessed the transformative impact of international education on our students' lives, we expanded our services to include comprehensive counseling, university placements, and preparation for English proficiency tests like IELTS and PTE.
+              </p>
+              
+              <p>
+                By 2018, we had established partnerships with over 100 prestigious universities across the globe, from the UK and Europe to the USA and New Zealand. Our alumni network grew exponentially, with success stories pouring in from students who found their dream careers abroad.
+              </p>
+              
+              <p>
+                Today, Abroad Dreams Consultant stands as a beacon of guidance for thousands of aspiring students. Our team of experienced counselors, most of whom have studied abroad themselves, brings firsthand knowledge and passion to every consultation. We've helped over 5,000 students achieve their international education goals, and we're just getting started.
+              </p>
+              
+              <p>
+                As we look to the future, we remain committed to our founding principle: providing personalized, ethical guidance that puts students' best interests at the heart of everything we do. Our journey continues, and we invite you to be part of our growing family of global achievers.
+              </p>
+            </div>
+          </div>
+          
+          {/* Right side - Image */}
+          <div className="relative h-[500px] md:h-[600px]">
+            <div className="relative h-full w-full overflow-hidden rounded-lg shadow-xl">
+              {/* Main image */}
+              {/* <Image
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071"
+                alt="Our team's journey"
+                fill
+                className="object-cover"
+              /> */}
+              
+              {/* Decorative elements */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0F4C5C]/30 to-transparent"></div>
+              
+              {/* Accent corner */}
+              <div className="absolute top-0 right-0 w-40 h-40 overflow-hidden">
+                <div className="absolute top-0 right-0 w-80 h-80 bg-[#9FE870]/20 rounded-full -translate-y-1/2 translate-x-1/2"></div>
               </div>
-              <h3 className="text-2xl font-semibold text-[#0F4C5C] group-hover:text-white mb-4 transition-colors duration-300">Innovation First</h3>
-              <p className="text-[#0F4C5C]/80 group-hover:text-white/80 transition-colors duration-300">We push boundaries and embrace new technologies to deliver cutting-edge solutions.</p>
-            </motion.div>
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="bg-[#E5F9E0] p-8 rounded-2xl group hover:bg-[#0F4C5C] transition-colors duration-300"
-            >
-              <div className="bg-[#0F4C5C] group-hover:bg-[#9FE870] w-14 h-14 rounded-xl flex items-center justify-center mb-6 transition-colors duration-300">
-                <Users className="w-7 h-7 text-white group-hover:text-[#0F4C5C]" />
+              
+              {/* Floating badge */}
+              <div className="absolute bottom-8 left-8 bg-white/90 backdrop-blur-sm px-6 py-4 rounded-lg shadow-lg">
+                <div className="text-[#0F4C5C] font-semibold">Est. 2014</div>
+                <div className="text-[#0F4C5C]/70 text-sm">A decade of excellence</div>
               </div>
-              <h3 className="text-2xl font-semibold text-[#0F4C5C] group-hover:text-white mb-4 transition-colors duration-300">Client Success</h3>
-              <p className="text-[#0F4C5C]/80 group-hover:text-white/80 transition-colors duration-300">Your success is our priority. We work closely with you to achieve and exceed your goals.</p>
-            </motion.div>
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="bg-[#E5F9E0] p-8 rounded-2xl group hover:bg-[#0F4C5C] transition-colors duration-300"
-            >
-              <div className="bg-[#0F4C5C] group-hover:bg-[#9FE870] w-14 h-14 rounded-xl flex items-center justify-center mb-6 transition-colors duration-300">
-                <Award className="w-7 h-7 text-white group-hover:text-[#0F4C5C]" />
-              </div>
-              <h3 className="text-2xl font-semibold text-[#0F4C5C] group-hover:text-white mb-4 transition-colors duration-300">Quality Driven</h3>
-              <p className="text-[#0F4C5C]/80 group-hover:text-white/80 transition-colors duration-300">We maintain the highest standards in every project, ensuring exceptional results.</p>
-            </motion.div>
+            </div>
+            
+            {/* Background pattern */}
+            <div className="absolute -bottom-5 -right-5 w-64 h-64 bg-[#F6B84C]/10 rounded-full -z-10"></div>
+            <div className="absolute -top-5 -left-5 w-32 h-32 border-2 border-[#9FE870]/30 rounded-full -z-10"></div>
           </div>
         </div>
-        {/* Background Elements */}
-        <div className="absolute left-0 top-1/2 -translate-y-1/2 w-32 h-32 bg-[#E5F9E0] rounded-full blur-3xl opacity-50"></div>
-        <div className="absolute right-0 bottom-0 w-64 h-64 bg-[#0F4C5C]/5 rounded-tl-full"></div>
-      </section>
+      </div>
+    </section>
 
       {/* Team Section */}
-      <section className="py-32 bg-[#0F4C5C]/5 relative overflow-hidden">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center max-w-2xl mx-auto mb-20"
-          >
-            <h2 className="text-4xl font-semibold text-[#0F4C5C] mb-6">Meet Our Leadership</h2>
-            <p className="text-lg text-[#0F4C5C]/70">Experienced professionals dedicated to driving innovation and delivering exceptional results.</p>
-          </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {[
-              { name: "Sarah Johnson", role: "CEO & Founder", image: "/team/sarah.jpg" },
-              { name: "Michael Chen", role: "CTO", image: "/team/michael.jpg" },
-              { name: "Emma Davis", role: "Design Director", image: "/team/emma.jpg" }
-            ].map((member, index) => (
-              <motion.div 
-                key={member.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="text-center group"
-              >
-                <div className="w-48 h-48 mx-auto mb-6 rounded-2xl bg-[#0F4C5C]/10 overflow-hidden relative">
-                  <div className="absolute inset-0 bg-gradient-to-b from-[#9FE870]/20 to-[#0F4C5C]/20 group-hover:scale-110 transition-transform duration-500"></div>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-0">
+            {/* Stats Grid - First 4 items */}
+            <div className="col-span-1 md:border-r border-gray-200 text-center p-4">
+              <h3 className="text-4xl md:text-5xl font-bold text-[#3D7A7A]">8+</h3>
+              <p className="text-[#0F4C5C] mt-2 text-sm md:text-base">Visa Categories</p>
+            </div>
+            
+            <div className="col-span-1 md:border-r border-gray-200 text-center p-4">
+              <h3 className="text-4xl md:text-5xl font-bold text-[#F6B84C]">940+</h3>
+              <p className="text-[#0F4C5C] mt-2 text-sm md:text-base">Visa Applications</p>
+            </div>
+            
+            <div className="col-span-1 md:border-r border-gray-200 text-center p-4">
+              <h3 className="text-4xl md:text-5xl font-bold text-[#F6B84C]">930+</h3>
+              <p className="text-[#0F4C5C] mt-2 text-sm md:text-base">Approvals</p>
+            </div>
+            
+            <div className="col-span-1 md:border-r border-gray-200 text-center p-4">
+              <h3 className="text-4xl md:text-5xl font-bold text-[#3D7A7A]">4.8</h3>
+              <p className="text-[#0F4C5C] mt-2 text-sm md:text-base">Reviews</p>
+            </div>
+            
+            {/* Badge with Years of Experience */}
+            <div className="col-span-2 md:col-span-1 flex justify-center items-center mt-6 md:mt-0">
+              <div className="bg-[#3D7A7A] rounded-2xl p-4 md:p-6 text-center text-white w-full max-w-[200px] md:max-w-[230px] flex flex-col items-center justify-center">
+                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white/20 mb-2 md:mb-3 flex items-center justify-center">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="white" />
+                  </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-[#0F4C5C] mb-2">{member.name}</h3>
-                <p className="text-[#0F4C5C]/60 mb-4">{member.role}</p>
-                <Button variant="ghost" className="text-[#0F4C5C] hover:text-[#9FE870] group/btn">
-                  View Profile
-                  <ChevronRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
-                </Button>
-              </motion.div>
-            ))}
+                <h3 className="text-4xl md:text-5xl font-bold">10+</h3>
+                <p className="mt-1 text-white/90 text-sm md:text-base">Years Of Experience</p>
+              </div>
+            </div>
+          </div>
+          
+          {/* Trusted Visa Solutions */}
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div className="md:col-span-1 hidden md:block">
+              {/* Intentionally left empty for layout balance */}
+            </div>
+            <div className="md:col-span-1">
+              <h2 className="text-3xl md:text-4xl font-semibold text-[#3D7A7A] mb-6 md:mb-8">Trusted Visa Solutions</h2>
+              <div className="space-y-4">
+                <div className="flex items-start">
+                  <Check className="w-5 h-5 md:w-6 md:h-6 text-[#3D7A7A] mr-3 flex-shrink-0 mt-1" />
+                  <p className="text-base md:text-lg text-gray-700">Expert Guidance You Can Trust</p>
+                </div>
+                <div className="flex items-start">
+                  <Check className="w-5 h-5 md:w-6 md:h-6 text-[#3D7A7A] mr-3 flex-shrink-0 mt-1" />
+                  <p className="text-base md:text-lg text-gray-700">High Visa Success Rates Guaranteed</p>
+                </div>
+                <div className="flex items-start">
+                  <Check className="w-5 h-5 md:w-6 md:h-6 text-[#3D7A7A] mr-3 flex-shrink-0 mt-1" />
+                  <p className="text-base md:text-lg text-gray-700">Tailored Solutions for Your Needs</p>
+                </div>
+                <div className="flex items-start">
+                  <Check className="w-5 h-5 md:w-6 md:h-6 text-[#3D7A7A] mr-3 flex-shrink-0 mt-1" />
+                  <p className="text-base md:text-lg text-gray-700">Transparent and Hassle-Free Process</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        {/* Background Pattern */}
-        <div className="absolute inset-0 w-full h-full">
-          <div className="absolute left-0 top-0 w-96 h-96 bg-[#9FE870]/5 rounded-br-full"></div>
-          <div className="absolute right-0 bottom-0 w-96 h-96 bg-[#0F4C5C]/5 rounded-tl-full"></div>
-        </div>
       </section>
+
 
       {/* Mission Section */}
       <section className="py-32 bg-[#0F4C5C] relative overflow-hidden">

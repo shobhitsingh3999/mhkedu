@@ -27,6 +27,22 @@ const stats = [
     ],
   },
   {
+    number: "Standard Of Excellence",
+    label: "Commitment to Quality, Expertise,",
+    subLabel: "Integrity and Client Success.",
+    bgColor: "bg-[#E5F9E0]",
+    textColor: "text-[#0F4C5C]",
+    image: null,
+    decorativeElements: [
+      {
+        color: "bg-white",
+        size: "w-96 h-96",
+        position: "bottom-0 -right-48 rotate-45",
+        opacity: "opacity-10",
+      },
+    ],
+  },
+  {
     number: "Personalised service",
     label: "Tailored solutions designed to meet",
     subLabel: "your unique immigration needs.",
@@ -43,27 +59,11 @@ const stats = [
       },
     ],
   },
-  {
-    number: "Standard Of Excellence",
-    label: "Commitment to Quality, Expertise,",
-    subLabel: "Integrity and Client Success.",
-    bgColor: "bg-[#E5F9E0]",
-    textColor: "text-[#0F4C5C]",
-    image: null,
-    decorativeElements: [
-      {
-        color: "bg-white",
-        size: "w-96 h-96",
-        position: "bottom-0 -right-48 rotate-45",
-        opacity: "opacity-10",
-      },
-    ],
-  },
 ];
 
 export default function StatsCards() {
   return (
-    <section className="w-full p-10">
+    <section className="w-full p-40">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {stats.map((stat, index) => (
           <motion.div

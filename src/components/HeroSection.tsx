@@ -39,9 +39,9 @@ const partnerLogos = [
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full overflow-hidden  pt-16 pb-8">
+    <section className="relative w-full overflow-hidden  pt-16 pb-8 ">
       {/* Background Video - Fixed to cover 80% of screen height */}
-      <div className="absolute inset-0 w-full h-[80vh] overflow-hidden">
+      <div className="absolute inset-0 w-full h-[80vh] overflow-hidden rounded-b-full py-1">
         <video
           autoPlay
           loop

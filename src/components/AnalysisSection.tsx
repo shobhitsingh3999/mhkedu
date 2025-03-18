@@ -1,15 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
-const checklistItems = [
-  "Lorem ipsum dolor sit",
-  "Probo ad nostrud",
-  "Fabell sed mea",
-  "Lorem ipsum dolor",
-  "Nusquam explicar"
-];
-
-export default function AnalysisSection() {
+export default function AboutDirectorSection() {
   return (
     <section className="relative bg-gradient-to-br from-[#0F4C5C] to-[#0A3845] min-h-screen flex items-center">
       <div className="container mx-auto px-4 grid md:grid-cols-2 gap-16 items-center py-24">
@@ -19,7 +11,7 @@ export default function AnalysisSection() {
           <div className="absolute inset-0 rounded-2xl overflow-hidden">
             <Image
               src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070"
-              alt="Team meeting with whiteboard"
+              alt="Our Director"
               fill
               className="object-cover"
               priority
@@ -38,28 +30,31 @@ export default function AnalysisSection() {
 
         {/* Right side - Content */}
         <div className="text-white max-w-xl">
-          <h2 className="text-[56px] font-light mb-16 leading-[1.2]">
-          Excellence in <span className="text-[#9FE870] font-normal">Visa Services</span>
+          <h2 className="text-[42px] font-light mb-8 leading-[1.2]">
+            <span className="text-[#9FE870] font-normal">Message from</span> Our Director
           </h2>
 
-          <div className="space-y-6 mb-16">
-            {checklistItems.map((item, index) => (
-              <div key={index} className="flex items-center gap-4">
-                <svg className="w-6 h-6 text-[#9FE870]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M20 6L9 17L4 12" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-                <span className="text-lg font-light">{item}</span>
-              </div>
-            ))}
+          <div className="space-y-6 mb-10">
+            <p className="text-white/90 leading-relaxed">
+              Based in Delhi and an alumnus of <span className="text-[#F6B84C] font-medium">Delhi University</span> with a degree in <span className="text-[#F6B84C] font-medium">B.Com (Hons.)</span>, I bring over <span className="text-[#F6B84C] font-medium">10 years</span> of extensive experience in the international education industry. Over the years, I have worked as a representative for numerous prestigious universities abroad, gaining in-depth expertise in student recruitment, marketing strategies and the study abroad sector.
+            </p>
+            
+            <p className="text-white/90 leading-relaxed">
+              With a proven track record in developing effective marketing campaigns and providing personalized counseling to aspiring students, I have successfully guided countless individuals in achieving their academic and career aspirations overseas. My deep understanding of global education systems, visa processes and cultural adaptation equips me to offer comprehensive support to students and their families.
+            </p>
+            
+            <p className="text-white/90 leading-relaxed">
+              As the Director of my company, I am committed to leveraging my skills and knowledge to build meaningful partnerships with international institutions and deliver unparalleled services to students, ensuring their transition to studying abroad is seamless and rewarding.
+            </p>
           </div>
 
           <Button 
             className="h-14 px-8 bg-white hover:bg-white/90 text-[#0F4C5C] rounded-full text-base font-normal"
           >
-            Free consultation
+            LinkedIn
           </Button>
         </div>
       </div>
     </section>
   );
-} 
+}

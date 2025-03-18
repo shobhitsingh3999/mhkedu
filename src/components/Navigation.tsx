@@ -6,10 +6,18 @@ import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Mail, MapPin, Phone, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import {
+  Mail,
+  MapPin,
+  Phone,
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+} from "lucide-react";
 
 const navItems = [
-  { label: "Home", href: "/demo" },
+  { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Study Visa", href: "/study-visa" },
   { label: "Coaching", href: "/coaching" },
@@ -48,12 +56,12 @@ export default function Navigation() {
               <span>+1 (555) 123-4567</span>
             </div>
           </div>
-          
+
           {/* Social Media Links */}
           <div className="flex items-center space-x-3">
             {socialLinks.map((social) => (
-              <Link 
-                key={social.label} 
+              <Link
+                key={social.label}
                 href={social.href}
                 className="hover:text-[#9FE870] transition-colors"
                 aria-label={social.label}
@@ -64,19 +72,25 @@ export default function Navigation() {
           </div>
         </div>
       </div>
-      
+
       {/* Main Navigation Bar */}
       <nav className="bg-white/80 backdrop-blur-md border-b border-slate-200">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           {/* Logo */}
           <Link href="/demo" className="flex items-center space-x-2">
             <div className="w-8 h-8">
-              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8 8h16v16H8V8z" fill="#0F4C5C"/>
-                <path d="M24 8h-8v8h8V8z" fill="#9FE870"/>
+              <svg
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M8 8h16v16H8V8z" fill="#0F4C5C" />
+                <path d="M24 8h-8v8h8V8z" fill="#9FE870" />
               </svg>
             </div>
-            <span className="text-xl font-semibold text-[#0F4C5C]">StartPro</span>
+            <span className="text-xl font-semibold text-[#0F4C5C]">
+              StartPro
+            </span>
           </Link>
 
           {/* Navigation Links */}
@@ -107,16 +121,8 @@ export default function Navigation() {
 
           {/* Call to Action Buttons */}
           <div className="flex items-center space-x-4">
-            <Button
-              variant="ghost"
-              className="hidden md:flex h-9 text-[#0F4C5C] hover:text-[#0F4C5C]/80 hover:bg-slate-100"
-            >
+            <Button className="h-9 px-4 bg-[#0F4C5C] hover:bg-[#0F4C5C]/90 text-white rounded-full">
               Free consultation
-            </Button>
-            <Button
-              className="h-9 px-4 bg-[#0F4C5C] hover:bg-[#0F4C5C]/90 text-white rounded-full"
-            >
-              Sign up
             </Button>
           </div>
         </div>
