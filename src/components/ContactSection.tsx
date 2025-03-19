@@ -38,7 +38,7 @@ export default function ContactSection() {
       <div className="container mx-auto px-6 md:px-8 relative z-10 flex justify-center">
         <div className="max-w-[460px]">
           <h2 className="text-[42px] leading-[1.1] text-white font-normal mb-3">
-            Let's Connect!
+            Lets Connect!
           </h2>
           <p className="text-white/80 text-base mb-8">
             Maiorum copiosae gubergren ea eam, ocurreret intellegam.<br />

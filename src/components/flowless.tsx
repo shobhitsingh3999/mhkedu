@@ -63,7 +63,7 @@ export default function FlawlessProcessComponent() {
           <div className="hidden lg:block absolute top-36 left-[12%] right-[12%] h-0.5 bg-gradient-to-r from-[#0F4C5C] via-[#0D7377] to-[#14BDEB]"></div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
-            {processSteps.map((step, index) => (
+            {processSteps.map((step) => (
               <div key={step.id} className="flex flex-col items-center group">
                 {/* Icon with rings */}
                 <div className="relative mb-8 transition-transform duration-500 group-hover:scale-110">

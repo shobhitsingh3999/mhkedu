@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import FooterSection from "@/components/FooterSection";
-import { ArrowRight, Users, Target, Award, ChevronRight, Check } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 import AnalysisSection from "@/components/AnalysisSection";
 
 export default function AboutPage() {
@@ -30,7 +30,7 @@ export default function AboutPage() {
               </p>
               
               <p>
-                In our early days, we focused on providing visa assistance for students aspiring to study in Canada and Australia. As we witnessed the transformative impact of international education on our students' lives, we expanded our services to include comprehensive counseling, university placements, and preparation for English proficiency tests like IELTS and PTE.
+                In our early days, we focused on providing visa assistance for students aspiring to study in Canada and Australia. As we witnessed the transformative impact of international education on our students lives, we expanded our services to include comprehensive counseling, university placements, and preparation for English proficiency tests like IELTS and PTE.
               </p>
               
               <p>
@@ -38,11 +38,11 @@ export default function AboutPage() {
               </p>
               
               <p>
-                Today, Abroad Dreams Consultant stands as a beacon of guidance for thousands of aspiring students. Our team of experienced counselors, most of whom have studied abroad themselves, brings firsthand knowledge and passion to every consultation. We've helped over 5,000 students achieve their international education goals, and we're just getting started.
+                Today, Abroad Dreams Consultant stands as a beacon of guidance for thousands of aspiring students. Our team of experienced counselors, most of whom have studied abroad themselves, brings firsthand knowledge and passion to every consultation. We have helped over 5,000 students achieve their international education goals, and we are just getting started.
               </p>
               
               <p>
-                As we look to the future, we remain committed to our founding principle: providing personalized, ethical guidance that puts students' best interests at the heart of everything we do. Our journey continues, and we invite you to be part of our growing family of global achievers.
+                As we look to the future, we remain committed to our founding principle: providing personalized, ethical guidance that puts students best interests at the heart of everything we do. Our journey continues, and we invite you to be part of our growing family of global achievers.
               </p>
             </div>
           </div>

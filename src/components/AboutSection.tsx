@@ -1,9 +1,7 @@
 "use client";
 
-import { useRef, useEffect } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Float, RoundedBox } from "@react-three/drei";
+import { useRef } from "react";
+import { motion } from "framer-motion";
 import { Award, Globe, Heart, Target, Linkedin, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -74,77 +72,6 @@ const achievements = [
   }
 ];
 
-function TeamMember3D() {
-  return (
-    <Canvas camera={{ position: [0, 0, 5], fov: 75 }}>
-      <ambientLight intensity={0.5} />
-      <pointLight position={[10, 10, 10]} />
-      <Float
-        speed={4}
-        rotationIntensity={0.5}
-        floatIntensity={2}
-      >
-        <group>
-          {/* Main card */}
-          <RoundedBox args={[2, 3, 0.2]} radius={0.1}>
-            <meshStandardMaterial
-              color="#4F46E5"
-              metalness={0.8}
-              roughness={0.2}
-            />
-          </RoundedBox>
-          
-          {/* Decorative elements */}
-          <group position={[1.2, 1.2, 0.2]}>
-            <mesh scale={0.3}>
-              <sphereGeometry args={[1, 32, 32]} />
-              <meshStandardMaterial
-                color="#818CF8"
-                metalness={0.8}
-                roughness={0.2}
-                opacity={0.6}
-                transparent
-              />
-            </mesh>
-          </group>
-          
-          <group position={[-1.2, -1.2, 0.2]}>
-            <mesh scale={0.4} rotation={[0, 0, Math.PI / 4]}>
-              <boxGeometry args={[1, 1, 1]} />
-              <meshStandardMaterial
-                color="#6366F1"
-                metalness={0.8}
-                roughness={0.2}
-                opacity={0.6}
-                transparent
-              />
-            </mesh>
-          </group>
-          
-          {/* Animated rings */}
-          <group position={[0, 0, -0.2]} rotation={[Math.PI / 4, 0, 0]}>
-            <mesh scale={1.5}>
-              <torusGeometry args={[0.8, 0.1, 16, 32]} />
-              <meshStandardMaterial
-                color="#C7D2FE"
-                metalness={0.8}
-                roughness={0.2}
-                opacity={0.4}
-                transparent
-              />
-            </mesh>
-          </group>
-        </group>
-      </Float>
-      <OrbitControls
-        enableZoom={false}
-        enablePan={false}
-        minPolarAngle={Math.PI / 2.5}
-        maxPolarAngle={Math.PI / 1.5}
-      />
-    </Canvas>
-  );
-}
 
 export default function AboutSection() {
   const containerRef = useRef<HTMLDivElement>(null);

@@ -1,41 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
-const partnerLogos = [
-  {
-    name: "MoneyM",
-    logo: "/logos/moneym.svg",
-    className: "w-28"
-  },
-  {
-    name: "Trade",
-    logo: "/logos/trade.svg",
-    className: "w-24"
-  },
-  {
-    name: "WalletSky",
-    logo: "/logos/walletsky.svg",
-    className: "w-32"
-  },
-  {
-    name: "Cube",
-    logo: "/logos/cube.svg",
-    className: "w-28"
-  },
-  {
-    name: "PayFlow",
-    logo: "/logos/payflow.svg",
-    className: "w-32"
-  },
-  {
-    name: "DarkLight",
-    logo: "/logos/darklight.svg",
-    className: "w-24"
-  }
-];
 
 export default function HeroSection() {
   return (

@@ -54,7 +54,7 @@ export default function TestimonialsSection() {
     }, 5000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [testimonials.length]);
 
   const handleSlideChange = (getNextSlide: (prev: number) => number) => {
     if (isAnimating) return;
@@ -114,7 +114,7 @@ export default function TestimonialsSection() {
           </h2>
           <div className="w-20 h-1 bg-[#9FE870] mx-auto mb-4"></div>
           <p className="text-[#0B3142]/70 max-w-xl mx-auto">
-            Real stories from our clients who've experienced remarkable results with our services
+            Real stories from our clients who have experienced remarkable results with our services
           </p>
         </div>
 

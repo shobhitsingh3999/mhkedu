@@ -1,8 +1,7 @@
 "use client";
 
-import { useRef } from "react";
 import Link from "next/link";
-import { ArrowUpRight, LineChart } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 interface CaseStudy {
   id: string;
