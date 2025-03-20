@@ -46,7 +46,6 @@ const stats = [
     number: "Personalised service",
     label: "Tailored solutions designed to meet",
     subLabel: "your unique immigration needs.",
-
     bgColor: "bg-[#0F4C5C]",
     image:
       "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop",
@@ -63,8 +62,8 @@ const stats = [
 
 export default function StatsCards() {
   return (
-    <section className="w-full p-40">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <section className="w-full px-4 py-12 sm:px-8 md:px-12 lg:px-16 xl:px-40">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
         {stats.map((stat, index) => (
           <motion.div
             key={index}
@@ -97,10 +96,10 @@ export default function StatsCards() {
             ))}
 
             {/* Content */}
-            <div className="relative h-full p-8 flex flex-col justify-between min-h-64">
+            <div className="relative h-full p-4 sm:p-6 lg:p-8 flex flex-col justify-between min-h-48 sm:min-h-56 md:min-h-64">
               <div>
                 <motion.h3
-                  className={`text-4xl font-medium ${
+                  className={`text-2xl sm:text-3xl lg:text-4xl font-medium ${
                     stat.textColor || "text-white"
                   } tracking-tight`}
                   initial={{ opacity: 0, y: 20 }}
@@ -110,7 +109,7 @@ export default function StatsCards() {
                   {stat.number}
                 </motion.h3>
                 <motion.p
-                  className={`text-2xl mt-3 font-medium leading-tight ${
+                  className={`text-base sm:text-xl lg:text-2xl mt-2 sm:mt-3 font-medium leading-tight ${
                     stat.textColor || "text-white"
                   }`}
                   initial={{ opacity: 0, y: 20 }}
@@ -121,7 +120,7 @@ export default function StatsCards() {
                   {stat.label}
                 </motion.p>
                 <motion.p
-                  className={`text-2xl leading-tight ${
+                  className={`text-base sm:text-xl lg:text-2xl leading-tight ${
                     stat.textColor || "text-white"
                   }`}
                   initial={{ opacity: 0, y: 20 }}
@@ -137,12 +136,12 @@ export default function StatsCards() {
               <motion.div
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                className={`w-12 h-12 rounded-full border ${
+                className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full border ${
                   stat.textColor ? "border-[#0F4C5C]" : "border-white"
-                } flex items-center justify-center group/btn mt-6`}
+                } flex items-center justify-center group/btn mt-4 sm:mt-6`}
               >
                 <ArrowUpRight
-                  className={`w-6 h-6 ${
+                  className={`w-5 h-5 sm:w-6 sm:h-6 ${
                     stat.textColor || "text-white"
                   } transition-transform duration-300 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1`}
                 />
