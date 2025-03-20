@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import dynamic from 'next/dynamic';
+import { ComponentType } from 'react';
 
 // Country name mapping
 const countryNames: Record<string, string> = {
@@ -12,8 +13,11 @@ const countryNames: Record<string, string> = {
   'europe': 'Europe'
 };
 
+// Define a proper type for the dynamically imported components
+type DynamicComponent = ComponentType<{}>;
+
 // Define dynamic imports for all country components
-const countryComponents: Record<string, any> = {
+const countryComponents: Record<string, DynamicComponent> = {
   'uk': dynamic(() => import('@/components/countryPages/uk'), { ssr: true }),
   'usa': dynamic(() => import('@/components/countryPages/usa'), { ssr: true }),
   'canada': dynamic(() => import('@/components/countryPages/canada'), { ssr: true }),
@@ -46,7 +50,7 @@ export async function generateStaticParams() {
   }));
 }
 
-// Country page component - use correct Next.js App Router types
+// Country page component
 export default function CountryPage({
   params,
 }: {
