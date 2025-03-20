@@ -13,7 +13,7 @@ const countryNames: Record<string, string> = {
 };
 
 // Define dynamic imports for all country components
-const countryComponents: Record<string, any> = {
+const countryComponents: Record<string, React.ComponentType> = {
   'uk': dynamic(() => import('@/components/countryPages/uk')),
   'usa': dynamic(() => import('@/components/countryPages/usa')),
   'canada': dynamic(() => import('@/components/countryPages/canada')),
@@ -30,7 +30,6 @@ type Props = {
 // Generate metadata for the page
 export async function generateMetadata(
   props: Props,
-  parent: ResolvingMetadata
 ): Promise<Metadata> {
   const country = props.params.country;
   
@@ -52,7 +51,7 @@ export function generateStaticParams() {
 
 // Suppress TypeScript type checking for this component by using "any"
 // This is a workaround for the strict type checking in Next.js 15
-const CountryPage = (props: any) => {
+const CountryPage = (props: Props) => {
   const { country } = props.params;
   
   // Check if the country exists in our mapping
