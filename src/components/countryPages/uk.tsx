@@ -39,13 +39,13 @@ export default function UKVisaPage() {
                 Education in the United Kingdom
               </h2>
               <p className="text-gray-700 mb-4">
-                The UK boasts a rich academic tradition dating back centuries, with some of the world's oldest and most prestigious universities. The British education system is renowned for its high standards, innovative teaching methods, and research excellence.
+                The UK boasts a rich academic tradition dating back centuries, with some of the world&apos;s oldest and most prestigious universities. The British education system is renowned for its high standards, innovative teaching methods, and research excellence.
               </p>
               <p className="text-gray-700 mb-4">
-                With over 160 universities and higher education institutions, the UK offers a diverse range of courses and qualifications recognized worldwide. From undergraduate degrees to master's programs and doctoral research, students can find opportunities that match their academic and career aspirations.
+                With over 160 universities and higher education institutions, the UK offers a diverse range of courses and qualifications recognized worldwide. From undergraduate degrees to master&apos;s programs and doctoral research, students can find opportunities that match their academic and career aspirations.
               </p>
               <p className="text-gray-700">
-                The UK's multicultural environment welcomes international students from all backgrounds, creating a rich and diverse academic community where global perspectives are valued and encouraged.
+                The UK&apos;s multicultural environment welcomes international students from all backgrounds, creating a rich and diverse academic community where global perspectives are valued and encouraged.
               </p>
             </div>
             <div className="relative h-64 md:h-80 lg:h-96 rounded-xl overflow-hidden">
@@ -222,7 +222,7 @@ export default function UKVisaPage() {
               <div>
                 <h3 className="text-xl font-semibold text-[#0F4C5C] mb-3">Graduate Route Visa</h3>
                 <p className="text-gray-700">
-                  The UK's Graduate Route allows international students to stay and work, or look for work, in the UK for 2 years after completing their studies (3 years for PhD graduates). This visa requires no sponsorship and has no minimum salary requirements.
+                  The UK&apos;s Graduate Route allows international students to stay and work, or look for work, in the UK for 2 years after completing their studies (3 years for PhD graduates). This visa requires no sponsorship and has no minimum salary requirements.
                 </p>
               </div>
               <div>

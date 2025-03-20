@@ -39,7 +39,7 @@ export default function NewZealandVisaPage() {
                 Education in New Zealand
               </h2>
               <p className="text-gray-700 mb-4">
-                New Zealand offers a British-based education system with a practical, hands-on learning approach that encourages creative thinking and innovation. All eight of New Zealand's universities rank in the top 3% globally, providing world-class education in a supportive environment.
+                New Zealand offers a British-based education system with a practical, hands-on learning approach that encourages creative thinking and innovation. All eight of New Zealand&apos;s universities rank in the top 3% globally, providing world-class education in a supportive environment.
               </p>
               <p className="text-gray-700">
                 The New Zealand Qualifications Framework (NZQF) ensures that all qualifications are recognized and valued internationally. With small class sizes and a focus on research-based teaching, New Zealand institutions foster close relationships between students and professors, creating an ideal learning environment where students are encouraged to ask questions and develop independent thinking skills.
@@ -218,7 +218,7 @@ export default function NewZealandVisaPage() {
               <div>
                 <h3 className="text-xl font-semibold text-[#0F4C5C] mb-3">Post-Study Work Visa</h3>
                 <p className="text-gray-700">
-                  After completing your studies, you can apply for a post-study work visa that allows you to work for any employer in New Zealand. The duration depends on your level of study and location: up to 3 years for a bachelor's degree or higher qualification, and up to 2 years for lower-level qualifications.
+                  After completing your studies, you can apply for a post-study work visa that allows you to work for any employer in New Zealand. The duration depends on your level of study and location: up to 3 years for a bachelor&apos;s degree or higher qualification, and up to 2 years for lower-level qualifications.
                 </p>
               </div>
               <div>

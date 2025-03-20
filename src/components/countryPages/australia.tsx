@@ -39,7 +39,7 @@ export default function AustraliaVisaPage() {
                 Education in Australia
               </h2>
               <p className="text-gray-700 mb-4">
-                Australia offers a world-class education system with a strong focus on innovation, research, and practical skills. The country's 43 universities consistently rank among the top institutions globally, with exceptional strengths in fields like engineering, natural sciences, medicine, and business studies.
+                Australia offers a world-class education system with a strong focus on innovation, research, and practical skills. The country&apos;s 43 universities consistently rank among the top institutions globally, with exceptional strengths in fields like engineering, natural sciences, medicine, and business studies.
               </p>
               <p className="text-gray-700">
                 The Australian Qualifications Framework (AQF) ensures that all qualifications meet strict quality standards and are recognized internationally. With a student-centered approach to learning that emphasizes critical thinking and creativity, Australian education prepares graduates to thrive in the global job market.
@@ -218,7 +218,7 @@ export default function AustraliaVisaPage() {
               <div>
                 <h3 className="text-xl font-semibold text-[#0F4C5C] mb-3">Temporary Graduate Visa (Subclass 485)</h3>
                 <p className="text-gray-700">
-                  After completing your studies, you can apply for the Post-Study Work stream of the Temporary Graduate visa, allowing you to work in Australia for 2-4 years, depending on your qualification level. Bachelor's degree graduates receive 2 years, Master's degree graduates 3 years, and PhD graduates 4 years.
+                  After completing your studies, you can apply for the Post-Study Work stream of the Temporary Graduate visa, allowing you to work in Australia for 2-4 years, depending on your qualification level. Bachelor&apos;s degree graduates receive 2 years, Master&apos;s degree graduates 3 years, and PhD graduates 4 years.
                 </p>
               </div>
               <div>

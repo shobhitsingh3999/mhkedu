@@ -39,10 +39,10 @@ export default function CanadaVisaPage() {
                 Education in Canada
               </h2>
               <p className="text-gray-700 mb-4">
-                Canada's education system is known for its excellence and consistently ranks among the world's best. With a wide range of programs offered by over 100 public and private universities and numerous colleges, students can find the perfect academic fit for their goals.
+                Canada&apos;s education system is known for its excellence and consistently ranks among the world&apos;s best. With a wide range of programs offered by over 100 public and private universities and numerous colleges, students can find the perfect academic fit for their goals.
               </p>
               <p className="text-gray-700">
-                Canadian institutions are at the forefront of research and innovation, particularly in fields like artificial intelligence, renewable energy, and biotechnology. The country's education approach emphasizes both theoretical knowledge and practical skills, preparing graduates for success in the global job market.
+                Canadian institutions are at the forefront of research and innovation, particularly in fields like artificial intelligence, renewable energy, and biotechnology. The country&apos;s education approach emphasizes both theoretical knowledge and practical skills, preparing graduates for success in the global job market.
               </p>
             </div>
             <div className="relative h-64 md:h-80 lg:h-96 rounded-xl overflow-hidden">
@@ -236,7 +236,7 @@ export default function CanadaVisaPage() {
               <div>
                 <h3 className="text-xl font-semibold text-[#0F4C5C] mb-3">Start-up Visa Program</h3>
                 <p className="text-gray-700">
-                  Entrepreneurial graduates with innovative business ideas can apply for permanent residency through Canada's Start-up Visa Program if they secure support from a designated organization.
+                  Entrepreneurial graduates with innovative business ideas can apply for permanent residency through Canada&apos;s Start-up Visa Program if they secure support from a designated organization.
                 </p>
               </div>
             </div>

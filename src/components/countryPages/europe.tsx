@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { GraduationCap, BookOpen, Briefcase, Home, Users, CheckCircle, Globe } from "lucide-react";
+import { GraduationCap, BookOpen, Briefcase, Home, CheckCircle, Globe } from "lucide-react";
 
 export default function EuropeVisaPage() {
   return (
@@ -225,7 +225,7 @@ export default function EuropeVisaPage() {
               <div>
                 <h3 className="text-xl font-semibold text-[#0F4C5C] mb-3">France</h3>
                 <p className="text-gray-700">
-                  The "recherche d'emploi ou création d'entreprise" visa allows graduates to stay for 12 months after completing their studies to find work or start a business.
+                  The &quot;recherche d&apos;emploi ou création d&apos;entreprise&quot; visa allows graduates to stay for 12 months after completing their studies to find work or start a business.
                 </p>
               </div>
               <div>

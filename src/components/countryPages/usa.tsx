@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { GraduationCap, BookOpen, Briefcase, Home, Users, CheckCircle } from "lucide-react";
+import { GraduationCap, BookOpen, Briefcase, Home, CheckCircle } from "lucide-react";
 
 export default function USAVisaPage() {
   return (
@@ -39,7 +39,7 @@ export default function USAVisaPage() {
                 Education in the United States
               </h2>
               <p className="text-gray-700 mb-4">
-                The United States hosts one of the world's most diverse education systems, with over 4,000 colleges and universities offering a wide range of programs and specializations.
+                The United States hosts one of the world&apos;s most diverse education systems, with over 4,000 colleges and universities offering a wide range of programs and specializations.
               </p>
               <p className="text-gray-700">
                 American higher education is known for its flexibility, allowing students to explore different subjects before choosing a major. With cutting-edge research opportunities and strong industry connections, studying in the USA provides an educational experience that is highly valued globally.
