@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import dynamic from 'next/dynamic';
+import React from 'react';
 
 // Country name mapping
 const countryNames: Record<string, string> = {
@@ -22,16 +23,13 @@ const countryComponents: Record<string, React.ComponentType> = {
   'europe': dynamic(() => import('@/components/countryPages/europe'))
 };
 
-type Props = {
-  params: { country: string };
-  searchParams: Record<string, string | string[] | undefined>;
-};
-
-// Generate metadata for the page
-export async function generateMetadata(
-  props: Props,
-): Promise<Metadata> {
-  const country = props.params.country;
+// Use the parameterized import directly rather than defining a custom Props type
+export async function generateMetadata({
+  params
+}: {
+  params: { country: string }
+}): Promise<Metadata> {
+  const country = params.country;
   
   // If this country doesn't exist in our mapping, use a default
   const countryName = countryNames[country] || 'Abroad';
@@ -49,10 +47,13 @@ export function generateStaticParams() {
   }));
 }
 
-// Suppress TypeScript type checking for this component by using "any"
-// This is a workaround for the strict type checking in Next.js 15
-const CountryPage = (props: Props) => {
-  const { country } = props.params;
+// Use the correct Next.js 15 interface for page props
+export default function CountryPage({
+  params
+}: {
+  params: { country: string }
+}) {
+  const { country } = params;
   
   // Check if the country exists in our mapping
   if (!countryComponents[country]) {
@@ -64,6 +65,4 @@ const CountryPage = (props: Props) => {
   const CountryComponent = countryComponents[country];
   
   return <CountryComponent />;
-};
-
-export default CountryPage;
+}
