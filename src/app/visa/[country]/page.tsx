@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+import type { Metadata, ResolvingMetadata } from 'next';
 import { notFound } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import React from 'react';
@@ -23,13 +23,18 @@ const countryComponents: Record<string, React.ComponentType> = {
   'europe': dynamic(() => import('@/components/countryPages/europe'))
 };
 
-// Use the parameterized import directly rather than defining a custom Props type
-export async function generateMetadata({
-  params
-}: {
-  params: { country: string }
-}): Promise<Metadata> {
-  const country = params.country;
+// Use the new Promise-based props pattern from Next.js 15
+type Props = {
+  params: Promise<{ country: string }>
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+}
+
+// Generate metadata for the page with the new Promise-based params
+export async function generateMetadata(
+  { params }: Props,
+): Promise<Metadata> {
+  // Read the route params
+  const { country } = await params;
   
   // If this country doesn't exist in our mapping, use a default
   const countryName = countryNames[country] || 'Abroad';
@@ -47,13 +52,10 @@ export function generateStaticParams() {
   }));
 }
 
-// Use the correct Next.js 15 interface for page props
-export default function CountryPage({
-  params
-}: {
-  params: { country: string }
-}) {
-  const { country } = params;
+// Page component with the new Promise-based params pattern
+export default async function CountryPage({ params }: Props) {
+  // Await the Promise to get the actual params
+  const { country } = await params;
   
   // Check if the country exists in our mapping
   if (!countryComponents[country]) {
