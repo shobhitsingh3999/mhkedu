@@ -13,7 +13,7 @@ const countryNames: Record<string, string> = {
 };
 
 // Define dynamic imports for all country components
-const countryComponents: Record<string, React.ComponentType> = {
+const countryComponents: Record<string, any> = {
   'uk': dynamic(() => import('@/components/countryPages/uk'), { ssr: true }),
   'usa': dynamic(() => import('@/components/countryPages/usa'), { ssr: true }),
   'canada': dynamic(() => import('@/components/countryPages/canada'), { ssr: true }),
@@ -23,7 +23,11 @@ const countryComponents: Record<string, React.ComponentType> = {
 };
 
 // Generate metadata for the page
-export async function generateMetadata({ params }: { params: { country: string } }): Promise<Metadata> {
+export async function generateMetadata({ 
+  params 
+}: { 
+  params: { country: string } 
+}): Promise<Metadata> {
   const country = params.country;
   
   // If this country doesn't exist in our mapping, use a default
@@ -37,13 +41,17 @@ export async function generateMetadata({ params }: { params: { country: string }
 
 // Function to generate static paths for all countries
 export async function generateStaticParams() {
-  return Object.keys(countryComponents).map(country => ({
+  return Object.keys(countryNames).map(country => ({
     country,
   }));
 }
 
-// Country page component
-export default function CountryPage({ params }: { params: { country: string } }) {
+// Country page component - use correct Next.js App Router types
+export default function CountryPage({
+  params,
+}: {
+  params: { country: string };
+}) {
   const { country } = params;
   
   // Check if the country exists in our mapping
