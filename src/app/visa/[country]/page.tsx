@@ -14,7 +14,7 @@ const countryNames: Record<string, string> = {
 };
 
 // Define a proper type for the dynamically imported components
-type DynamicComponent = ComponentType<{}>;
+type DynamicComponent = ComponentType<object>;
 
 // Define dynamic imports for all country components
 const countryComponents: Record<string, DynamicComponent> = {
