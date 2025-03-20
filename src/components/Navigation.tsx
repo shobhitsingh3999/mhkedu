@@ -18,7 +18,7 @@ import {
 const navItems = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Study Visa", href: "/study-visa" },
+  { label: "Study Visa", href: "/visa" },
   { label: "Coaching", href: "/coaching" },
   { label: "Visitor Visa", href: "/vistor-visa" },
   { label: "Contact Us", href: "/contact" },
