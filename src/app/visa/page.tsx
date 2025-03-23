@@ -20,42 +20,42 @@ const destinations: Destination[] = [
   {
     id: 'uk',
     name: 'United Kingdom',
-    image: '/placeholder-uk.jpg',
+    image: 'https://cdn.pixabay.com/photo/2015/02/12/15/47/london-633880_1280.jpg',
     description: 'Experience world-class education in one of the most prestigious academic destinations.',
     color: '#0F4C5C',
   },
   {
     id: 'usa',
     name: 'United States',
-    image: '/placeholder-usa.jpg',
+    image: 'https://cdn.pixabay.com/photo/2020/02/16/20/29/nyc-4854718_1280.jpg',
     description: 'Access to cutting-edge research and innovation in a diverse academic environment.',
     color: '#14BDEB',
   },
   {
     id: 'canada',
     name: 'Canada',
-    image: '/placeholder-canada.jpg',
+    image: 'https://cdn.pixabay.com/photo/2016/04/01/00/08/toronto-1298016_1280.jpg',
     description: 'Quality education with post-graduation work permits and immigration pathways.',
     color: '#0D7377',
   },
   {
     id: 'australia',
     name: 'Australia',
-    image: '/placeholder-australia.jpg',
+    image: 'https://cdn.pixabay.com/photo/2023/04/06/23/10/skyscrapers-7905232_1280.jpg',
     description: 'World-renowned universities with a focus on innovation and research.',
     color: '#0F4C5C',
   },
   {
     id: 'new-zealand',
     name: 'New Zealand',
-    image: '/placeholder-newzealand.jpg',
+    image: 'https://cdn.pixabay.com/photo/2023/06/21/16/26/warnemunde-8079731_1280.jpg',
     description: 'High-quality education in a safe, welcoming and breathtaking environment.',
     color: '#14BDEB',
   },
   {
     id: 'europe',
     name: 'Europe',
-    image: '/placeholder-europe.jpg',
+    image: 'https://cdn.pixabay.com/photo/2020/08/08/18/58/florence-5473716_1280.jpg',
     description: 'Diverse study options across multiple countries with rich cultural experiences.',
     color: '#0D7377',
   }
@@ -68,7 +68,7 @@ export default function VisaDestinations() {
       <section className="relative bg-[#0F4C5C] py-16 md:py-20 lg:py-24 overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <Image
-            src="/placeholder-world-map.jpg"  // Replace with your image
+            src="https://cdn.pixabay.com/photo/2015/02/12/15/47/london-633880_1280.jpg"  // Replace with your image
             alt="World Map Background"
             fill
             className="object-cover opacity-20"
@@ -101,7 +101,7 @@ export default function VisaDestinations() {
                 >
                   <div className="relative h-56 w-full">
                     <Image
-                      src={destination.image}  // Replace with your image
+                      src={destination.image}  
                       alt={`Study in ${destination.name}`}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
