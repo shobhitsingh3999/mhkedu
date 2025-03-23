@@ -9,7 +9,7 @@ export default function NewZealandVisaPage() {
       <section className="relative bg-[#0F4C5C] py-16 md:py-20 lg:py-24 overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <Image
-            src="/placeholder-newzealand-campus.jpg"  // Replace with your image
+            src="https://cdn.pixabay.com/photo/2017/03/17/16/33/auckland-2152056_1280.jpg"  // Replace with your image
             alt="New Zealand University Campus"
             fill
             className="object-cover opacity-20"
@@ -47,7 +47,7 @@ export default function NewZealandVisaPage() {
             </div>
             <div className="relative h-64 md:h-80 lg:h-96 rounded-xl overflow-hidden">
               <Image
-                src="/placeholder-newzealand-education.jpg"  // Replace with your image
+                src="https://cdn.pixabay.com/photo/2017/03/17/16/33/auckland-2152056_1280.jpg"  // Replace with your image
                 alt="New Zealand Education"
                 fill
                 className="object-cover"
@@ -118,32 +118,32 @@ export default function NewZealandVisaPage() {
             {[
               {
                 name: "University of Auckland",
-                image: "/placeholder-auckland.jpg",
+                image: "https://cdn.pixabay.com/photo/2017/06/04/11/08/auckland-2370801_1280.jpg",
                 description: "New Zealand's highest-ranked university, known for research excellence across disciplines, particularly in engineering, medicine, and business."
               },
               {
                 name: "University of Otago",
-                image: "/placeholder-otago.jpg",
+                image: "https://cdn.pixabay.com/photo/2022/03/07/09/50/building-7053263_1280.jpg",
                 description: "New Zealand's first university with strengths in health sciences, sciences, and humanities in a vibrant student city."
               },
               {
                 name: "Victoria University of Wellington",
-                image: "/placeholder-wellington.jpg",
+                image: "https://cdn.pixabay.com/photo/2020/02/19/03/53/city-4861189_1280.jpg",
                 description: "Located in New Zealand's capital city with strengths in law, public policy, architecture, and creative arts."
               },
               {
                 name: "University of Canterbury",
-                image: "/placeholder-canterbury.jpg",
+                image: "https://cdn.pixabay.com/photo/2018/07/16/22/39/canterbury-3543154_1280.jpg",
                 description: "Known for engineering, forestry, and natural sciences with strong industry connections and research facilities."
               },
               {
                 name: "Massey University",
-                image: "/placeholder-massey.jpg",
+                image: "https://cdn.pixabay.com/photo/2018/10/27/15/41/zhejiang-university-3776785_1280.jpg",
                 description: "Specializes in agriculture, veterinary science, aviation, and distance learning with campuses across New Zealand."
               },
               {
                 name: "Lincoln University",
-                image: "/placeholder-lincoln.jpg",
+                image: "https://cdn.pixabay.com/photo/2020/01/28/23/45/cathedral-4801274_1280.jpg",
                 description: "New Zealand's agricultural university with expertise in agriculture, horticulture, and environmental management."
               }
             ].map((university, index) => (
@@ -197,7 +197,7 @@ export default function NewZealandVisaPage() {
             </div>
             <div className="relative h-64 md:h-80 lg:h-96 rounded-xl overflow-hidden">
               <Image
-                src="/placeholder-newzealand-students.jpg"  // Replace with your image
+                src="https://cdn.pixabay.com/photo/2013/11/24/05/45/auckland-216820_1280.jpg" 
                 alt="New Zealand Students"
                 fill
                 className="object-cover"

@@ -9,7 +9,7 @@ export default function AustraliaVisaPage() {
       <section className="relative bg-[#0F4C5C] py-16 md:py-20 lg:py-24 overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <Image
-            src="/placeholder-australia-campus.jpg"  // Replace with your image
+            src="https://cdn.pixabay.com/photo/2017/08/17/15/25/sydney-2651711_1280.jpg"  // Replace with your image
             alt="Australian University Campus"
             fill
             className="object-cover opacity-20"
@@ -47,7 +47,7 @@ export default function AustraliaVisaPage() {
             </div>
             <div className="relative h-64 md:h-80 lg:h-96 rounded-xl overflow-hidden">
               <Image
-                src="/placeholder-australia-education.jpg"  // Replace with your image
+                src="https://cdn.pixabay.com/photo/2017/08/17/15/25/sydney-2651711_1280.jpg"  // Replace with your image
                 alt="Australia Education"
                 fill
                 className="object-cover"
@@ -118,32 +118,32 @@ export default function AustraliaVisaPage() {
             {[
               {
                 name: "University of Melbourne",
-                image: "/placeholder-melbourne.jpg",
+                image: "https://cdn.pixabay.com/photo/2020/04/22/08/01/melbourne-5076470_1280.jpg",
                 description: "Australia's leading university with particular strengths in medicine, education, law, and the arts."
               },
               {
                 name: "Australian National University",
-                image: "/placeholder-anu.jpg",
+                image: "https://cdn.pixabay.com/photo/2019/10/25/09/19/tall-ship-4576469_1280.jpg",
                 description: "Located in Canberra, known for research excellence and strong connections to government and policy."
               },
               {
                 name: "University of Sydney",
-                image: "/placeholder-sydney.jpg",
+                image: "https://cdn.pixabay.com/photo/2017/08/03/06/48/sydney-2574814_1280.jpg",
                 description: "One of Australia's oldest universities with comprehensive programs and a stunning campus."
               },
               {
                 name: "University of Queensland",
-                image: "/placeholder-queensland.jpg",
+                image: "https://cdn.pixabay.com/photo/2019/02/03/22/48/queensland-3973681_1280.jpg",
                 description: "Leader in research across disciplines including biotechnology, engineering, and marine science."
               },
               {
                 name: "Monash University",
-                image: "/placeholder-monash.jpg",
+                image: "https://cdn.pixabay.com/photo/2018/11/05/12/01/green-space-3795952_1280.jpg",
                 description: "Known for innovation, industry connections, and a global outlook with multiple international campuses."
               },
               {
                 name: "University of New South Wales",
-                image: "/placeholder-unsw.jpg",
+                image: "https://cdn.pixabay.com/photo/2023/06/21/16/26/warnemunde-8079731_1280.jpg",
                 description: "Renowned for engineering, business, and scientific research with strong industry partnerships."
               }
             ].map((university, index) => (
@@ -197,7 +197,7 @@ export default function AustraliaVisaPage() {
             </div>
             <div className="relative h-64 md:h-80 lg:h-96 rounded-xl overflow-hidden">
               <Image
-                src="/placeholder-australia-students.jpg"  // Replace with your image
+                src="https://cdn.pixabay.com/photo/2018/11/05/11/46/australia-3795891_1280.jpg"  // Replace with your image
                 alt="Australian Students"
                 fill
                 className="object-cover"

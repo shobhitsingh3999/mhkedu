@@ -9,7 +9,7 @@ export default function EuropeVisaPage() {
       <section className="relative bg-[#0F4C5C] py-16 md:py-20 lg:py-24 overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <Image
-            src="/placeholder-europe-campus.jpg"  // Replace with your image
+            src="https://cdn.pixabay.com/photo/2020/04/02/22/09/santorini-4996846_1280.jpg"  // Replace with your image
             alt="European University Campus"
             fill
             className="object-cover opacity-20"
@@ -47,7 +47,7 @@ export default function EuropeVisaPage() {
             </div>
             <div className="relative h-64 md:h-80 lg:h-96 rounded-xl overflow-hidden">
               <Image
-                src="/placeholder-europe-education.jpg"  // Replace with your image
+                src="https://cdn.pixabay.com/photo/2020/04/02/22/09/santorini-4996846_1280.jpg"
                 alt="Europe Education"
                 fill
                 className="object-cover"
@@ -118,32 +118,32 @@ export default function EuropeVisaPage() {
             {[
               {
                 name: "University of Oxford (UK)",
-                image: "/placeholder-oxford.jpg",
+                image: "https://cdn.pixabay.com/photo/2020/03/27/17/46/needles-4974448_1280.jpg",
                 description: "One of the world's oldest universities, renowned for its research excellence and tutorial-based teaching system."
               },
               {
                 name: "ETH Zurich (Switzerland)",
-                image: "/placeholder-eth.jpg",
+                image: "https://cdn.pixabay.com/photo/2015/09/09/21/55/university-933618_1280.jpg",
                 description: "Leading institution for science, technology, engineering, and mathematics with a strong focus on innovation."
               },
               {
                 name: "Sorbonne University (France)",
-                image: "/placeholder-sorbonne.jpg",
+                image: "https://cdn.pixabay.com/photo/2016/11/29/07/43/sorbonne-1868165_1280.jpg",
                 description: "Historic Parisian university known for arts, humanities, sciences, and medicine in the heart of France's capital."
               },
               {
                 name: "Technical University of Munich (Germany)",
-                image: "/placeholder-munich.jpg",
+                image: "https://cdn.pixabay.com/photo/2018/05/09/19/29/munich-3385958_1280.jpg",
                 description: "Germany's top technical university with strengths in engineering, natural sciences, and technology."
               },
               {
                 name: "University of Amsterdam (Netherlands)",
-                image: "/placeholder-amsterdam.jpg",
+                image: "https://cdn.pixabay.com/photo/2021/11/08/11/33/amsterdam-centraal-station-6778948_1280.jpg",
                 description: "Leading research university in the Netherlands with a wide range of English-taught programs."
               },
               {
                 name: "KU Leuven (Belgium)",
-                image: "/placeholder-leuven.jpg",
+                image: "https://cdn.pixabay.com/photo/2014/11/20/15/11/town-hall-539316_1280.jpg",
                 description: "One of Europe's oldest and most renowned universities with exceptional research output across disciplines."
               }
             ].map((university, index) => (
@@ -198,7 +198,7 @@ export default function EuropeVisaPage() {
             </div>
             <div className="relative h-64 md:h-80 lg:h-96 rounded-xl overflow-hidden">
               <Image
-                src="/placeholder-europe-students.jpg"  // Replace with your image
+                src="https://cdn.pixabay.com/photo/2021/10/23/16/31/italy-6735340_1280.jpg"
                 alt="European Students"
                 fill
                 className="object-cover"

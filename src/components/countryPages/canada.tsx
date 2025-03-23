@@ -9,7 +9,7 @@ export default function CanadaVisaPage() {
       <section className="relative bg-[#0F4C5C] py-16 md:py-20 lg:py-24 overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <Image
-            src="/placeholder-canada-campus.jpg"  // Replace with your image
+            src="https://cdn.pixabay.com/photo/2018/01/27/23/46/toronto-3112508_1280.jpg"  // Replace with your image
             alt="Canadian University Campus"
             fill
             className="object-cover opacity-20"
@@ -47,7 +47,7 @@ export default function CanadaVisaPage() {
             </div>
             <div className="relative h-64 md:h-80 lg:h-96 rounded-xl overflow-hidden">
               <Image
-                src="/placeholder-canada-education.jpg"  // Replace with your image
+                src="https://cdn.pixabay.com/photo/2018/01/27/23/46/toronto-3112508_1280.jpg"  // Replace with your image
                 alt="Canada Education"
                 fill
                 className="object-cover"
@@ -118,32 +118,32 @@ export default function CanadaVisaPage() {
             {[
               {
                 name: "University of Toronto",
-                image: "/placeholder-toronto.jpg",
+                image: "https://cdn.pixabay.com/photo/2014/12/17/02/01/university-570999_1280.jpg",
                 description: "Canada's top-ranked university with strengths in medicine, business, engineering, and humanities."
               },
               {
                 name: "University of British Columbia",
-                image: "/placeholder-ubc.jpg",
+                image: "https://cdn.pixabay.com/photo/2021/08/11/02/31/university-6537167_1280.jpg",
                 description: "Located in Vancouver, known for research excellence and beautiful campus settings."
               },
               {
                 name: "McGill University",
-                image: "/placeholder-mcgill.jpg",
+                image: "https://cdn.pixabay.com/photo/2020/05/18/22/18/university-5188610_1280.jpg",
                 description: "Historic Montreal institution with a strong international reputation across disciplines."
               },
               {
                 name: "University of Waterloo",
-                image: "/placeholder-waterloo.jpg",
+                image: "https://cdn.pixabay.com/photo/2020/01/09/03/43/mansion-4751778_1280.jpg",
                 description: "Leader in innovation with North America's largest co-operative education program."
               },
               {
                 name: "University of Alberta",
-                image: "/placeholder-alberta.jpg",
+                image: "https://cdn.pixabay.com/photo/2020/09/29/10/42/library-5612441_1280.jpg",
                 description: "Known for research in health sciences, engineering, and natural resources."
               },
               {
                 name: "University of Montreal",
-                image: "/placeholder-montreal.jpg",
+                image: "https://cdn.pixabay.com/photo/2013/11/27/02/13/rikkyo-university-219058_1280.jpg",
                 description: "Major French-language research university with strengths in medicine and sciences."
               }
             ].map((university, index) => (
@@ -197,7 +197,7 @@ export default function CanadaVisaPage() {
             </div>
             <div className="relative h-64 md:h-80 lg:h-96 rounded-xl overflow-hidden">
               <Image
-                src="/placeholder-canada-students.jpg"  // Replace with your image
+                src="https://cdn.pixabay.com/photo/2021/11/23/06/45/city-6818066_1280.jpg"
                 alt="Canadian Students"
                 fill
                 className="object-cover"
