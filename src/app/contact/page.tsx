@@ -29,7 +29,7 @@ export default function ContactUsPage() {
               Get in Touch
             </h1>
             <p className="text-lg md:text-xl text-white/80 mb-8">
-              We're here to answer your questions and provide the assistance you need.
+              We&apos;re here to answer your questions and provide the assistance you need.
               Reach out to us today.
             </p>
           </div>
