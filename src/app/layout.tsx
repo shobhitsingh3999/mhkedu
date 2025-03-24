@@ -6,8 +6,8 @@ import Navigation from "@/components/Navigation";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "StartPro - Enterprise Solutions",
-  description: "Transform your business with our enterprise solutions",
+  title: "MHK - Consultants Solutions",
+  description: "Transform your Abroad Journey with our consultants solutions",
 };
 
 export default function RootLayout({
