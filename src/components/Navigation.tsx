@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import {
   Mail,
@@ -13,6 +13,8 @@ import {
   Twitter,
   Instagram,
   Linkedin,
+  Menu,
+  X,
 } from "lucide-react";
 
 const navItems = [
@@ -34,6 +36,24 @@ const socialLinks = [
 export default function Navigation() {
   const pathname = usePathname();
   const [hoveredPath, setHoveredPath] = useState(pathname);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
+
+  // Close mobile menu when screen size increases
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) { // md breakpoint
+        setIsMenuOpen(false);
+      }
+    };
+    
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
@@ -92,7 +112,7 @@ export default function Navigation() {
             </span>
           </Link>
 
-          {/* Navigation Links */}
+          {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center space-x-1">
             {navItems.map((item) => (
               <Link
@@ -120,12 +140,59 @@ export default function Navigation() {
 
           {/* Call to Action Buttons */}
           <div className="flex items-center space-x-4">
-            <Button className="h-9 px-4 bg-[#0F4C5C] hover:bg-[#0F4C5C]/90 text-white rounded-full">
+            <Button className="hidden sm:inline-flex h-9 px-4 bg-[#0F4C5C] hover:bg-[#0F4C5C]/90 text-white rounded-full">
               Free consultation
             </Button>
+            
+            {/* Mobile Menu Toggle */}
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="md:hidden p-2 text-slate-600 hover:text-slate-900 focus:outline-none"
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
+            </button>
           </div>
         </div>
       </nav>
+      
+      {/* Mobile Navigation Menu */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="md:hidden bg-white border-b border-slate-200 shadow-lg"
+          >
+            <div className="container mx-auto px-4 py-3">
+              <div className="flex flex-col space-y-2">
+                {navItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={`px-3 py-2 rounded-md ${
+                      pathname === item.href
+                        ? "bg-slate-100 text-slate-900"
+                        : "text-slate-600 hover:bg-slate-50"
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+                <Button className="mt-2 h-10 bg-[#0F4C5C] hover:bg-[#0F4C5C]/90 text-white rounded-full">
+                  Free consultation
+                </Button>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }
