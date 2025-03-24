@@ -304,8 +304,8 @@ export default function CoachingOptionsPage() {
                   How Abroad Dreams Consultant Can Help You
                 </h2>
                 <p className="text-lg text-white/80 mb-8">
-                  At Abroad Dreams Consultant, we're committed to your success. From personalized coaching 
-                  to exam preparation strategies, we're here to guide you every step of the way.
+                  At Abroad Dreams Consultant, we&apos;re committed to your success. From personalized coaching 
+                  to exam preparation strategies, we&apos;re here to guide you every step of the way.
                 </p>
                 <Button className="bg-[#9FE870] hover:bg-[#9FE870]/90 text-[#0F4C5C] font-medium rounded-full h-12 px-8 text-lg">
                   Start Your IELTS Preparation
