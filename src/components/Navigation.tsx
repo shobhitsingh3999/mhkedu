@@ -72,7 +72,7 @@ export default function Navigation() {
             </div>
             <div className="hidden md:flex items-center">
               <Phone className="h-3 w-3 mr-1" />
-              <span>+1 (555) 123-4567</span>
+              <span>+91 1234567890</span>
             </div>
           </div>
 

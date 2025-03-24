@@ -2,55 +2,43 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { MapPin, Phone, Mail, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function LocationsSection() {
   const locations = [
     {
       city: "Canada",
-      address: "17th St, New York, NY 10011",
-      phone: "+ 99 11 123 456; + 99 11 123 456",
-      email: "startpro@example.com",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
       bgColor: "#D9E6EA",
       bgImage: "url('https://images.unsplash.com/photo-1517935706615-2717063c2225?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2FuYWRhfGVufDB8fDB8fHww')",
     },
     {
       city: "United Kingdom (UK)",
-      address: "Whitcomb Ct, London W1D 6BP",
-      phone: "+ 99 11 123 456; + 99 11 123 456",
-      email: "startpro@example.com",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
       bgColor: "#0B3142",
       bgImage: "url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=1000')",
     },
     {
       city: "Australia",
-      address: "Waterlooplein 1, 1011 NV",
-      phone: "+ 99 11 123 456; + 99 11 123 456",
-      email: "startpro@example.com",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
       bgColor: "#D9E6EA",
       bgImage: "url('https://abroaddreamsconsultant.com/wp-content/uploads/2024/11/pexels-steve-tingley-2172304-15009437-scaled.jpg')",
     },
     {
       city: "Europe",
-      address: "Seestrasse 21, Zurich, CH",
-      phone: "+ 99 11 123 456; + 99 11 123 456",
-      email: "startpro@example.com",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
       bgColor: "#0B3142",
       bgImage: "url('https://images.unsplash.com/photo-1515488764276-beab7607c1e6?q=80&w=1000')",
     },
     {
       city: "USA",
-      address: "Waterlooplein 1, 1011 NV",
-      phone: "+ 99 11 123 456; + 99 11 123 456",
-      email: "startpro@example.com",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
       bgColor: "#D9E6EA",
       bgImage: "url('https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?q=80&w=1000')",
     },
     {
       city: "New Zealand",
-      address: "Seestrasse 21, Zurich, CH",
-      phone: "+ 99 11 123 456; + 99 11 123 456",
-      email: "startpro@example.com",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
       bgColor: "#0B3142",
       bgImage: "url('https://plus.unsplash.com/premium_photo-1682449558329-b04c01db4d42?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fHw%3D')",
     },
@@ -220,9 +208,7 @@ export default function LocationsSection() {
 interface LocationProps {
   location: {
     city: string;
-    address: string;
-    phone: string;
-    email: string;
+    description: string;
     bgColor: string;
     bgImage: string;
   };
@@ -241,7 +227,7 @@ function LocationCard({ location }: LocationProps) {
         style={{ backgroundImage: location.bgImage }}
       >
         {/* Overlay to enhance image visibility */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
         
         {/* Decorative background elements */}
         <div className="absolute inset-0 overflow-hidden">
@@ -254,12 +240,8 @@ function LocationCard({ location }: LocationProps) {
           </svg>
         </div>
         
-        {/* City name */}
-        <div className="absolute bottom-0 left-0 w-full p-6">
-          <div className="inline-block bg-white/85 backdrop-blur-md rounded-lg px-5 py-3 shadow-lg">
-            <h3 className="text-2xl font-bold text-[#0B3142]">{location.city}</h3>
-          </div>
-        </div>
+        {/* Empty space where country name used to be */}
+        {/* Country name moved to content section below */}
       </div>
       
       {/* Content section */}
@@ -274,30 +256,17 @@ function LocationCard({ location }: LocationProps) {
             backgroundSize: '20px 20px'
           }}></div>
         </div>
-        <div className={`space-y-4 ${textColorClass}`}>
-          <div className="flex items-start gap-3">
-            <MapPin className={`w-5 h-5 mt-0.5 flex-shrink-0 ${textColorClass}`} />
-            <p>{location.address}</p>
-          </div>
-          
-          <div className="flex items-start gap-3">
-            <Phone className={`w-5 h-5 mt-0.5 flex-shrink-0 ${textColorClass}`} />
-            <p>{location.phone}</p>
-          </div>
-          
-          <div className="flex items-start gap-3">
-            <Mail className={`w-5 h-5 mt-0.5 flex-shrink-0 ${textColorClass}`} />
-            <a 
-              href={`mailto:${location.email}`} 
-              className="hover:underline transition-colors"
-            >
-              {location.email}
-            </a>
-          </div>
+        
+        {/* Country name */}
+        <h3 className={`text-2xl font-bold ${textColorClass} mb-3`}>{location.city}</h3>
+        
+        {/* Description */}
+        <div className={`${textColorClass} mb-6`}>
+          <p className="leading-relaxed">{location.description}</p>
         </div>
         
         {/* Button */}
-        <div className="mt-6">
+        <div>
           <Link 
             href="#" 
             className={`
