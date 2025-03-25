@@ -37,7 +37,7 @@ export default function Navigation() {
   const pathname = usePathname();
   const [hoveredPath, setHoveredPath] = useState(pathname);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
+
   // Close mobile menu when route changes
   useEffect(() => {
     setIsMenuOpen(false);
@@ -46,11 +46,12 @@ export default function Navigation() {
   // Close mobile menu when screen size increases
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 768) { // md breakpoint
+      if (window.innerWidth >= 768) {
+        // md breakpoint
         setIsMenuOpen(false);
       }
     };
-    
+
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -96,20 +97,19 @@ export default function Navigation() {
       <nav className="bg-white/80 backdrop-blur-md border-b border-slate-200">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/demo" className="flex items-center space-x-2">
-            <div className="w-8 h-8">
-              <svg
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M8 8h16v16H8V8z" fill="#0F4C5C" />
-                <path d="M24 8h-8v8h8V8z" fill="#9FE870" />
-              </svg>
+          <Link href="/" className="flex items-center space-x-2">
+            <div className="w-20 ">
+              {" "}
+              <img
+                src="/logo.jpeg"
+                alt="mhk"
+                width={128}
+                height={128}
+              />{" "}
             </div>
-            <span className="text-xl font-semibold text-[#0F4C5C]">
+            {/* <span className="text-xl font-semibold text-[#0F4C5C]">
               StartPro
-            </span>
+            </span> */}
           </Link>
 
           {/* Desktop Navigation Links */}
@@ -143,7 +143,7 @@ export default function Navigation() {
             <Button className="hidden sm:inline-flex h-9 px-4 bg-[#0F4C5C] hover:bg-[#0F4C5C]/90 text-white rounded-full">
               Free consultation
             </Button>
-            
+
             {/* Mobile Menu Toggle */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -159,7 +159,7 @@ export default function Navigation() {
           </div>
         </div>
       </nav>
-      
+
       {/* Mobile Navigation Menu */}
       <AnimatePresence>
         {isMenuOpen && (
