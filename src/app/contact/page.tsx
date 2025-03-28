@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState, ChangeEvent, FormEvent } from 'react';
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import {
@@ -10,7 +10,167 @@ import {
   Clock
 } from "lucide-react";
 
+// Define types for form data
+interface FormData {
+  name: string;
+  email: string;
+  phone: string;
+  subject: string;
+  message: string;
+}
+
+// Define types for form status
+interface FormStatus {
+  submitted: boolean;
+  submitting: boolean;
+  info: {
+    error: boolean;
+    msg: string | null;
+  };
+}
+
 export default function ContactUsPage() {
+  const [formData, setFormData] = useState<FormData>({
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: ''
+  });
+  
+  const [status, setStatus] = useState<FormStatus>({
+    submitted: false,
+    submitting: false,
+    info: { error: false, msg: null }
+  });
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus({ submitted: false, submitting: true, info: { error: false, msg: null } });
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const data = await response.json();
+
+      if (response.status === 200) {
+        setStatus({
+          submitted: true,
+          submitting: false,
+          info: { error: false, msg: 'Your message has been sent successfully!' }
+        });
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: ''
+        });
+      } else {
+        setStatus({
+          submitted: false,
+          submitting: false,
+          info: { error: true, msg: data.error || 'Something went wrong. Please try again later.' }
+        });
+      }
+    } catch (error) {
+      setStatus({
+        submitted: false,
+        submitting: false,
+        info: { error: true, msg: 'An error occurred. Please check your network connection and try again.' }
+      });
+    }
+  };
+
+  // Define type for contact information items
+  interface ContactItem {
+    icon: React.ReactNode;
+    title: string;
+    info: string;
+    subInfo: string;
+  }
+
+  // Create contact information array
+  const contactItems: ContactItem[] = [
+    {
+      icon: <Mail size={20} />,
+      title: "Email Us",
+      info: "info@gmail.com",
+      subInfo: "We'll respond within 24 hours"
+    },
+    {
+      icon: <Phone size={20} />,
+      title: "Call Us",
+      info: "+91 98765 43210",
+      subInfo: "Mon-Fri from 9am to 6pm"
+    },
+    {
+      icon: <MapPin size={20} />,
+      title: "Visit Our Office",
+      info: "123 Consultant Avenue, New Delhi, India - 110001",
+      subInfo: "Get directions"
+    },
+    {
+      icon: <Clock size={20} />,
+      title: "Business Hours",
+      info: "Monday to Friday: 9:00 AM - 6:00 PM",
+      subInfo: "Saturday: 10:00 AM - 4:00 PM (By appointment)"
+    },
+  ];
+
+  // Define type for FAQ items
+  interface FAQItem {
+    question: string;
+    answer: string;
+  }
+
+  // Create FAQ array
+  const faqItems: FAQItem[] = [
+    {
+      question: "How quickly can I expect a response after contacting you?",
+      answer: "We strive to respond to all inquiries within 24 business hours. For urgent matters, we recommend calling our office directly."
+    },
+    {
+      question: "Do I need to make an appointment before visiting your office?",
+      answer: "While walk-ins are welcome during regular business hours, we recommend scheduling an appointment to ensure that a consultant will be available to assist you without waiting."
+    },
+    {
+      question: "Can I get a consultation over video call?",
+      answer: "Yes, we offer virtual consultations via Zoom, Google Meet, or other platforms for clients who cannot visit our office in person. These sessions are just as comprehensive as in-person meetings."
+    },
+    {
+      question: "Is there a fee for the initial consultation?",
+      answer: "We offer a free 30-minute initial consultation to discuss your requirements and how we can assist you. Detailed consultations and personalized services may have applicable fees."
+    },
+    {
+      question: "What documents should I bring for my first consultation?",
+      answer: "It's helpful to bring your educational documents, passport, any existing test scores (like IELTS/PTE), and a clear idea of your goals. This allows us to provide more specific guidance during your first visit."
+    }
+  ];
+
+  // Create services array
+  const services: string[] = [
+    "Study Abroad Consultations",
+    "Visa Application Assistance",
+    "IELTS & PTE Coaching",
+    "University Selection Guidance",
+    "Scholarship Assistance",
+    "Pre-Departure Briefing"
+  ];
+
   return (
     <div className="bg-white">
       {/* Hero Section */}
@@ -46,17 +206,22 @@ export default function ContactUsPage() {
                 Send Us a Message
               </h2>
               
+              {status.info.error && (
+                <div className="mb-6 p-4 bg-red-50 border-l-4 border-red-500 text-red-700 rounded">
+                  <p>{status.info.msg}</p>
+                </div>
+              )}
+              
+              {status.submitted && !status.info.error && (
+                <div className="mb-6 p-4 bg-green-50 border-l-4 border-green-500 text-green-700 rounded">
+                  <p>{status.info.msg}</p>
+                </div>
+              )}
+              
               <form 
-                action="https://formsubmit.co/abpandey0515@gmail.com" 
-                method="POST"
+                onSubmit={handleSubmit}
                 className="space-y-4"
               >
-                {/* FormSubmit configuration fields */}
-                <input type="hidden" name="_subject" value="New contact form submission" />
-                <input type="hidden" name="_captcha" value="true" />
-                <input type="hidden" name="_template" value="table" />
-                <input type="hidden" name="_next" value="https://google.com" />
-
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                     Your Name <span className="text-red-500">*</span>
@@ -65,6 +230,8 @@ export default function ContactUsPage() {
                     type="text"
                     id="name"
                     name="name"
+                    value={formData.name}
+                    onChange={handleChange}
                     required
                     className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0F4C5C] text-gray-800"
                     placeholder="John Doe"
@@ -80,6 +247,8 @@ export default function ContactUsPage() {
                       type="email"
                       id="email"
                       name="email"
+                      value={formData.email}
+                      onChange={handleChange}
                       required
                       className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0F4C5C] text-gray-800"
                       placeholder="johndoe@example.com"
@@ -94,6 +263,8 @@ export default function ContactUsPage() {
                       type="tel"
                       id="phone"
                       name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
                       required
                       className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0F4C5C] text-gray-800"
                       placeholder="+1 (123) 456-7890"
@@ -109,6 +280,8 @@ export default function ContactUsPage() {
                     type="text"
                     id="subject"
                     name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
                     className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0F4C5C] text-gray-800"
                     placeholder="How can we help you?"
                   />
@@ -121,6 +294,8 @@ export default function ContactUsPage() {
                   <textarea
                     id="message"
                     name="message"
+                    value={formData.message}
+                    onChange={handleChange}
                     required
                     rows={6}
                     className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0F4C5C] text-gray-800"
@@ -131,9 +306,10 @@ export default function ContactUsPage() {
                 <div className="pt-2">
                   <Button 
                     type="submit"
+                    disabled={status.submitting}
                     className="bg-[#0F4C5C] hover:bg-[#0F4C5C]/90 text-white font-medium rounded-lg px-6 py-3 w-full md:w-auto"
                   >
-                    Send Message
+                    {status.submitting ? 'Sending...' : 'Send Message'}
                   </Button>
                 </div>
               </form>
@@ -146,32 +322,7 @@ export default function ContactUsPage() {
                   Contact Information
                 </h2>
                 <ul className="space-y-6">
-                  {[
-                    {
-                      icon: <Mail size={20} />,
-                      title: "Email Us",
-                      info: "info@gmail.com",
-                      subInfo: "We'll respond within 24 hours"
-                    },
-                    {
-                      icon: <Phone size={20} />,
-                      title: "Call Us",
-                      info: "+91 98765 43210",
-                      subInfo: "Mon-Fri from 9am to 6pm"
-                    },
-                    {
-                      icon: <MapPin size={20} />,
-                      title: "Visit Our Office",
-                      info: "123 Consultant Avenue, New Delhi, India - 110001",
-                      subInfo: "Get directions"
-                    },
-                    {
-                      icon: <Clock size={20} />,
-                      title: "Business Hours",
-                      info: "Monday to Friday: 9:00 AM - 6:00 PM",
-                      subInfo: "Saturday: 10:00 AM - 4:00 PM (By appointment)"
-                    },
-                  ].map((item, index) => (
+                  {contactItems.map((item, index) => (
                     <li key={index} className="flex">
                       <div className="w-10 h-10 rounded-full bg-[#0F4C5C]/10 flex items-center justify-center flex-shrink-0 mt-1">
                         <div className="text-[#0F4C5C]">{item.icon}</div>
@@ -191,14 +342,7 @@ export default function ContactUsPage() {
                   Our Services
                 </h2>
                 <ul className="space-y-3">
-                  {[
-                    "Study Abroad Consultations",
-                    "Visa Application Assistance",
-                    "IELTS & PTE Coaching",
-                    "University Selection Guidance",
-                    "Scholarship Assistance",
-                    "Pre-Departure Briefing"
-                  ].map((service, index) => (
+                  {services.map((service, index) => (
                     <li key={index} className="flex items-start">
                       <div className="text-[#9FE870] mr-2 mt-1">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -244,28 +388,7 @@ export default function ContactUsPage() {
           </h2>
           <div className="max-w-4xl mx-auto">
             <div className="space-y-4">
-              {[
-                {
-                  question: "How quickly can I expect a response after contacting you?",
-                  answer: "We strive to respond to all inquiries within 24 business hours. For urgent matters, we recommend calling our office directly."
-                },
-                {
-                  question: "Do I need to make an appointment before visiting your office?",
-                  answer: "While walk-ins are welcome during regular business hours, we recommend scheduling an appointment to ensure that a consultant will be available to assist you without waiting."
-                },
-                {
-                  question: "Can I get a consultation over video call?",
-                  answer: "Yes, we offer virtual consultations via Zoom, Google Meet, or other platforms for clients who cannot visit our office in person. These sessions are just as comprehensive as in-person meetings."
-                },
-                {
-                  question: "Is there a fee for the initial consultation?",
-                  answer: "We offer a free 30-minute initial consultation to discuss your requirements and how we can assist you. Detailed consultations and personalized services may have applicable fees."
-                },
-                {
-                  question: "What documents should I bring for my first consultation?",
-                  answer: "It's helpful to bring your educational documents, passport, any existing test scores (like IELTS/PTE), and a clear idea of your goals. This allows us to provide more specific guidance during your first visit."
-                }
-              ].map((item, index) => (
+              {faqItems.map((item, index) => (
                 <div
                   key={index}
                   className="bg-white p-6 rounded-xl shadow-sm border border-gray-100"
