@@ -87,6 +87,7 @@ export default function ContactUsPage() {
         });
       }
     } catch (error) {
+      console.error(error)
       setStatus({
         submitted: false,
         submitting: false,
