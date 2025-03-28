@@ -8,6 +8,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import LocationsSection from "@/components/LocationsSection";
 import FooterSection from "@/components/FooterSection";
 import FlowlessProcessComponent from "@/components/flowless";
+import Review from "@/components/Review";
 
 export default function DemoPage() {
   return (
@@ -20,6 +21,8 @@ export default function DemoPage() {
 
       {/* Features Section */}
       <FeaturesSection />
+
+      <Review/>
 
       {/* Stats Bar Section */}
 

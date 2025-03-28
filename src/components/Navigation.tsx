@@ -65,7 +65,7 @@ export default function Navigation() {
           <div className="flex items-center space-x-4">
             <div className="flex items-center">
               <Mail className="h-3 w-3 mr-1" />
-              <span>info@gmail.com</span>
+              <span><a href="mailto:info@mhkeducationconsultant.com">info@mhkeducationconsultant.com</a></span>
             </div>
             <div className="hidden sm:flex items-center">
               <MapPin className="h-3 w-3 mr-1" />
