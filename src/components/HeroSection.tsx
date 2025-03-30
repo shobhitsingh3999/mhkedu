@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
@@ -59,14 +60,18 @@ export default function HeroSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-6 md:mt-10 flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center"
           >
+            <Link href="/contact">
             <Button 
               size="lg"
               className="w-full sm:w-auto h-12 md:h-14 px-6 md:px-8 text-base md:text-lg bg-[#9FE870] hover:bg-[#9FE870]/90 text-[#0F4C5C] font-medium rounded-full"
             >
               Free consultation
+              
             </Button>
+            </Link>
             
             {/* About Us Button - Responsive sizing */}
+            <Link href="/about">
             <Button 
               size="lg"
               variant="outline"
@@ -74,15 +79,18 @@ export default function HeroSection() {
             >
               About Us
             </Button>
+            </Link>
             
             {/* Contact Us Button - Responsive sizing */}
-            <Button 
-              size="lg"
-              variant="outline"
-              className="w-full sm:w-auto h-12 md:h-14 px-6 md:px-8 text-base md:text-lg border-2 border-white text-white hover:bg-white hover:text-[#0F4C5C] transition-colors duration-300 font-medium rounded-full mt-3 sm:mt-0"
-            >
+            {/* <Link href="/contact">
+             <Button 
+             size="lg"
+             variant="outline"
+             className="w-full sm:w-auto h-12 md:h-14 px-6 md:px-8 text-base md:text-lg border-2 border-white text-white hover:bg-white hover:text-[#0F4C5C] transition-colors duration-300 font-medium rounded-full mt-3 sm:mt-0">
               Contact Us
-            </Button>
+              </Button>
+              </Link> */}
+
           </motion.div>
         </div>
       </div>

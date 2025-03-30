@@ -46,7 +46,7 @@ export default function FooterSection() {
               <li className="flex items-center">
                 <span className="text-[#F6B84C] mr-2">›</span>
                 <Link
-                  href="#"
+                  href="/about"
                   className="text-white hover:text-[#0D7377] transition-colors"
                 >
                   About Us
@@ -55,7 +55,7 @@ export default function FooterSection() {
               <li className="flex items-center">
                 <span className="text-[#F6B84C] mr-2">›</span>
                 <Link
-                  href="#"
+                  href="/visa/canada"
                   className="text-white hover:text-[#0D7377] transition-colors"
                 >
                   Study inCanada
@@ -64,7 +64,7 @@ export default function FooterSection() {
               <li className="flex items-center">
                 <span className="text-[#F6B84C] mr-2">›</span>
                 <Link
-                  href="#"
+                  href="/visa/australia"
                   className="text-white hover:text-[#0D7377] transition-colors"
                 >
                   Study In Australia
@@ -82,7 +82,7 @@ export default function FooterSection() {
               <li className="flex items-center">
                 <span className="text-[#F6B84C] mr-2">›</span>
                 <Link
-                  href="#"
+                  href="/visa/uk"
                   className="text-white hover:text-[#0D7377] transition-colors"
                 >
                   Study inUK
@@ -91,7 +91,7 @@ export default function FooterSection() {
               <li className="flex items-center">
                 <span className="text-[#F6B84C] mr-2">›</span>
                 <Link
-                  href="#"
+                  href="/visa/europe"
                   className="text-white hover:text-[#0D7377] transition-colors"
                 >
                   Study inEurope
@@ -100,7 +100,7 @@ export default function FooterSection() {
               <li className="flex items-center">
                 <span className="text-[#F6B84C] mr-2">›</span>
                 <Link
-                  href="#"
+                  href="/coaching"
                   className="text-white hover:text-[#0D7377] transition-colors"
                 >
                   IELTS
@@ -109,7 +109,7 @@ export default function FooterSection() {
               <li className="flex items-center">
                 <span className="text-[#F6B84C] mr-2">›</span>
                 <Link
-                  href="#"
+                  href="/coaching"
                   className="text-white hover:text-[#0D7377] transition-colors"
                 >
                   PTE
@@ -138,7 +138,7 @@ export default function FooterSection() {
                   </svg>
                 </div>
                 <span className="ml-3 text-white/90">
-                  Mukherjee Nagar Delhi
+                Sydney Australia
                 </span>
               </li>
               <li className="flex items-center">
@@ -155,10 +155,10 @@ export default function FooterSection() {
                   </svg>
                 </div>
                 <a
-                  href="tel:+918368641218"
+                  href="tel:+61452507091"
                   className="ml-3 text-white/90 hover:text-[#F6B84C]"
                 >
-                  +91 1234567890
+                  +61 452 507 091
                 </a>
               </li>
               <li className="flex items-center">
@@ -175,10 +175,10 @@ export default function FooterSection() {
                   </svg>
                 </div>
                 <a
-                  href="mailto:abroaddreams4@gmail.com"
+                  href="mailto:info@mhkeducationconsultant.com"
                   className="ml-3 text-white/90 hover:text-[#F6B84C]"
                 >
-                  info@gmail.com
+                  info@mhkeducationconsultant.com
                 </a>
               </li>
             </ul>
@@ -186,7 +186,7 @@ export default function FooterSection() {
             {/* Social Media Icons */}
             <div className="flex mt-6 gap-3">
               <a
-                href="#"
+                href="https://www.facebook.com/people/MHK-Education-and-consultants/61556574771916/"
                 className="bg-white rounded-full p-2 hover:bg-[#0D7377] transition-colors"
               >
                 <Facebook size={18} className="text-[#0F4C5C]" />

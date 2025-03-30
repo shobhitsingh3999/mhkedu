@@ -57,9 +57,12 @@ export default function CoachingOptionsPage() {
                   activeTab === "PTE" ? "bg-[#9FE870] text-[#0F4C5C]" : "hover:bg-white/10"
                 }`}
               >
+
+                
                 PTE
               </button>
             </div>
+
 
             <Button className="bg-[#9FE870] hover:bg-[#9FE870]/90 text-[#0F4C5C] font-medium rounded-full h-12 px-8 text-lg">
               Book Free Demo Class
@@ -675,6 +678,7 @@ export default function CoachingOptionsPage() {
             </div>
           </div>
         </div>
+        
       </section>
     </div>
   );

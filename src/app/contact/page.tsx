@@ -3,12 +3,15 @@
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+
 import {
   Mail,
   Phone,
   MapPin,
   Clock
 } from "lucide-react";
+import FooterSection from '@/components/FooterSection';
+
 
 // Define types for form data
 interface FormData {
@@ -109,19 +112,19 @@ export default function ContactUsPage() {
     {
       icon: <Mail size={20} />,
       title: "Email Us",
-      info: "info@gmail.com",
+      info: "info@mhkeducationconsultant.com",
       subInfo: "We'll respond within 24 hours"
     },
     {
       icon: <Phone size={20} />,
       title: "Call Us",
-      info: "+91 98765 43210",
+      info: "+61 452 507 091",
       subInfo: "Mon-Fri from 9am to 6pm"
     },
     {
       icon: <MapPin size={20} />,
-      title: "Visit Our Office",
-      info: "123 Consultant Avenue, New Delhi, India - 110001",
+      title: "Location",
+      info: "Sydney Australia",
       subInfo: "Get directions"
     },
     {
@@ -198,7 +201,7 @@ export default function ContactUsPage() {
       </section>
 
       {/* Contact Information Section */}
-      <section className="py-12 md:py-16 lg:py-20">
+      <section className="py-12 md:py-20 lg:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8 items-start">
             {/* Contact Form */}
@@ -360,26 +363,48 @@ export default function ContactUsPage() {
         </div>
       </section>
 
-      {/* Map Section */}
+
       <section className="py-12 md:py-16 lg:py-20 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#0F4C5C] mb-10 text-center">
-            Find Us Here
-          </h2>
-          <div className="bg-white p-2 rounded-xl shadow-sm border border-gray-100">
-            <div className="relative aspect-video w-full rounded-lg overflow-hidden bg-gray-200">
-              {/* This would be replaced with an actual map in a real application */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="w-12 h-12 text-[#0F4C5C] mx-auto mb-2" />
-                  <p className="font-medium text-gray-700">Interactive map would be displayed here</p>
-                  <p className="text-sm text-gray-500">123 Consultant Avenue, New Delhi, India - 110001</p>
-                </div>
-              </div>
-            </div>
-          </div>
+  <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 className="text-2xl md:text-3xl font-bold text-[#0F4C5C] mb-10 text-center">
+      Find Us Here
+    </h2>
+    <div className="bg-white p-2 md:p-4 rounded-xl shadow-sm border border-gray-100">
+      {/* Responsive map container with aspect ratio */}
+      <div className="relative w-full overflow-hidden rounded-lg" style={{ paddingBottom: "56.25%" }}> {/* 16:9 Aspect Ratio */}
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.8997995078917!2d151.2131272!3d-33.8608075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae3d3646a103%3A0xaf5746078e22581b!2sCircular%20Quay%2C%20Sydney%20NSW%202000%2C%20Australia!5e0!3m2!1sen!2sus!4v1716985723201!5m2!1sen!2sus" 
+          className="absolute top-0 left-0 w-full h-full"
+          frameBorder="0"
+          allowFullScreen={true}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          aria-label="Map showing our location in Sydney, Australia"
+        ></iframe>
+      </div>
+      
+      {/* Optional: Add location details that are also responsive */}
+      <div className="mt-4 py-2 text-center md:text-left md:flex md:justify-between md:items-center">
+        <div>
+          <p className="font-medium text-gray-700">Our Sydney Location</p>
+          <p className="text-sm text-gray-500">Circular Quay, Sydney NSW 2000, Australia</p>
         </div>
-      </section>
+        <a 
+          href="https://maps.app.goo.gl/EJqTRqtnm34J4bL36" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="mt-2 md:mt-0 inline-block text-[#0F4C5C] text-sm font-medium hover:underline"
+        >
+          Get Directions →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
 
       {/* FAQ Section */}
       <section className="py-12 md:py-16 lg:py-20">
@@ -406,7 +431,7 @@ export default function ContactUsPage() {
       </section>
 
       {/* Newsletter Section */}
-      <section className="py-12 md:py-16 lg:py-20 bg-[#0F4C5C]">
+      {/* <section className="py-12 md:py-16 lg:py-20 bg-[#0F4C5C]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
@@ -431,7 +456,9 @@ export default function ContactUsPage() {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
+
+      <FooterSection />
     </div>
   );
 }

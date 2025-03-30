@@ -13,6 +13,7 @@ export default function LocationsSection() {
       bgColor: "#D9E6EA",
       bgImage:
         "url('https://images.unsplash.com/photo-1517935706615-2717063c2225?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2FuYWRhfGVufDB8fDB8fHww')",
+      path: "/visa/canada"
     },
     {
       city: "United Kingdom (UK)",
@@ -21,6 +22,7 @@ export default function LocationsSection() {
       bgColor: "#0B3142",
       bgImage:
         "url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=1000')",
+        path: "/visa/canada"
     },
     {
       city: "Australia",
@@ -29,6 +31,7 @@ export default function LocationsSection() {
       bgColor: "#D9E6EA",
       bgImage:
         "url('https://abroaddreamsconsultant.com/wp-content/uploads/2024/11/pexels-steve-tingley-2172304-15009437-scaled.jpg')",
+        path: "/visa/australia"
     },
     {
       city: "Europe",
@@ -37,6 +40,7 @@ export default function LocationsSection() {
       bgColor: "#0B3142",
       bgImage:
         "url('https://images.unsplash.com/photo-1515488764276-beab7607c1e6?q=80&w=1000')",
+        path: "/visa/europe"
     },
     {
       city: "USA",
@@ -45,6 +49,7 @@ export default function LocationsSection() {
       bgColor: "#D9E6EA",
       bgImage:
         "url('https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?q=80&w=1000')",
+        path: "/visa/usa"
     },
     {
       city: "New Zealand",
@@ -53,6 +58,7 @@ export default function LocationsSection() {
       bgColor: "#0B3142",
       bgImage:
         "url('https://plus.unsplash.com/premium_photo-1682449558329-b04c01db4d42?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fHw%3D')",
+        path: "/visa/new-zealand"
     },
   ];
 
@@ -290,6 +296,7 @@ interface LocationProps {
     description: string;
     bgColor: string;
     bgImage: string;
+    path: string;
   };
 }
 
@@ -297,6 +304,7 @@ function LocationCard({ location }: LocationProps) {
   // Determine text color based on background color
   const isLightBackground = location.bgColor === "#D9E6EA";
   const textColorClass = isLightBackground ? "text-[#0B3142]" : "text-white";
+  // const router = useRouter();
 
   return (
     <div className="h-full rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
@@ -348,51 +356,51 @@ function LocationCard({ location }: LocationProps) {
 
       {/* Content section */}
       <div
-        className="p-6 relative"
-        style={{ backgroundColor: location.bgColor }}
-      >
-        {/* Subtle background pattern */}
-        <div className="absolute inset-0 overflow-hidden opacity-10">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: `radial-gradient(circle, ${
-                isLightBackground ? "#0B3142" : "#FFFFFF"
-              } 1px, transparent 1px)`,
-              backgroundSize: "20px 20px",
-            }}
-          ></div>
-        </div>
+  className="p-6 relative z-10"
+  style={{ backgroundColor: location.bgColor }}
+>
+  {/* Subtle background pattern */}
+  <div className="absolute inset-0 overflow-hidden opacity-10 z-0 pointer-events-none">
+    <div
+      className="absolute inset-0"
+      style={{
+        backgroundImage: `radial-gradient(circle, ${
+          isLightBackground ? "#0B3142" : "#FFFFFF"
+        } 1px, transparent 1px)`,
+        backgroundSize: "20px 20px",
+      }}
+    ></div>
+  </div>
 
-        {/* Country name */}
-        <h3 className={`text-2xl font-bold ${textColorClass} mb-3`}>
-          {location.city}
-        </h3>
+  {/* Country name */}
+  <h3 className={`text-2xl font-bold ${textColorClass} mb-3`}>
+    {location.city}
+  </h3>
 
-        {/* Description */}
-        <div className={`${textColorClass} mb-6`}>
-          <p className="leading-relaxed">{location.description}</p>
-        </div>
+  {/* Description */}
+  <div className={`${textColorClass} mb-6`}>
+    <p className="leading-relaxed">{location.description}</p>
+  </div>
 
-        {/* Button */}
-        <div>
-          <Link
-            href="#"
-            className={`
-              inline-flex items-center gap-2 rounded-full px-5 py-2
-              ${
-                isLightBackground
-                  ? "bg-[#0B3142] text-white hover:bg-[#0B3142]/90"
-                  : "bg-white text-[#0B3142] hover:bg-white/90"
-              } 
-              transition-colors shadow-md
-            `}
-          >
-            <span>Learn More</span>
-            <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
-      </div>
+  {/* Button */}
+  <div>
+    <Link
+      href={location.path}
+      className={`
+        inline-flex items-center gap-2 rounded-full px-5 py-2 cursor-pointer
+        ${isLightBackground
+          ? "bg-[#0B3142] text-white hover:bg-[#0B3142]/90"
+          : "bg-white text-[#0B3142] hover:bg-white/90"}
+        transition-colors shadow-md
+      `}
+    >
+      <span>Learn More</span>
+      <ArrowRight className="w-4 h-4" />
+    </Link>
+  </div>
+</div>
+
+     
     </div>
   );
 }

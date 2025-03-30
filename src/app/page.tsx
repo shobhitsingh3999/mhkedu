@@ -4,11 +4,14 @@ import FeaturesSection from "@/components/FeaturesSection";
 import StatsBar from "@/components/StatsBar";
 import FutureSection from "@/components/FutureSection";
 import StoriesSection from "@/components/StoriesSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
+// import TestimonialsSection from "@/components/TestimonialsSection";
 import LocationsSection from "@/components/LocationsSection";
 import FooterSection from "@/components/FooterSection";
 import FlowlessProcessComponent from "@/components/flowless";
 import Review from "@/components/Review";
+import OurPartners from "@/components/ui/partner";
+
+
 
 export default function DemoPage() {
   return (
@@ -22,7 +25,11 @@ export default function DemoPage() {
       {/* Features Section */}
       <FeaturesSection />
 
-      <Review/>
+      
+
+
+      <OurPartners/>
+      
 
       {/* Stats Bar Section */}
 
@@ -43,7 +50,8 @@ export default function DemoPage() {
       {/* <CaseStudiesSection /> */}
 
       {/* Testimonials Section */}
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
+      <Review/>
 
       {/* FAQ Section */}
       {/* <FAQSection /> */}

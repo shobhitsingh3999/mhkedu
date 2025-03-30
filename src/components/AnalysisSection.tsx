@@ -36,15 +36,15 @@ export default function AboutDirectorSection() {
 
           <div className="space-y-6 mb-10">
             <p className="text-white/90 leading-relaxed">
-              Based in Delhi and an alumnus of <span className="text-[#F6B84C] font-medium">Delhi University</span> with a degree in <span className="text-[#F6B84C] font-medium">B.Com (Hons.)</span>, I bring over <span className="text-[#F6B84C] font-medium">10 years</span> of extensive experience in the international education industry. Over the years, I have worked as a representative for numerous prestigious universities abroad, gaining in-depth expertise in student recruitment, marketing strategies and the study abroad sector.
+            Based in Sydney, Australia, and an alumnus of <span className="text-[#F6B84C] font-medium">Karachi University</span> with a degree in BBA (Hons), I bring over 6 years of dedicated experience in the international education industry. Throughout my career, I have had the privilege of representing numerous prestigious universities around the world, gaining in-depth expertise in student recruitment, strategic marketing, and the ever-evolving study abroad sector.
             </p>
             
             <p className="text-white/90 leading-relaxed">
-              With a proven track record in developing effective marketing campaigns and providing personalized counseling to aspiring students, I have successfully guided countless individuals in achieving their academic and career aspirations overseas. My deep understanding of global education systems, visa processes and cultural adaptation equips me to offer comprehensive support to students and their families.
+            My passion lies in empowering students to pursue their academic dreams beyond borders. With a strong track record in crafting impactful marketing campaigns and offering tailored counseling sessions, I have helped countless students navigate their journey to studying abroad — from choosing the right course and university to understanding visa processes and adapting to new cultures.
             </p>
             
             <p className="text-white/90 leading-relaxed">
-              As the Director of my company, I am committed to leveraging my skills and knowledge to build meaningful partnerships with international institutions and deliver unparalleled services to students, ensuring their transition to studying abroad is seamless and rewarding.
+            As the Director of our company, I lead a team of Qualified Education Counsellors who share the same vision and commitment. With a remarkable 95% visa grant success rate, we pride ourselves on delivering accurate, ethical, and personalized guidance that puts our students’ goals at the forefront.
             </p>
           </div>
 

@@ -10,9 +10,9 @@ import {
   MapPin,
   Phone,
   Facebook,
-  Twitter,
-  Instagram,
-  Linkedin,
+  // Twitter,
+  // Instagram,
+  // Linkedin,
   Menu,
   X,
 } from "lucide-react";
@@ -27,10 +27,10 @@ const navItems = [
 ];
 
 const socialLinks = [
-  { icon: Facebook, href: "#", label: "Facebook" },
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
+  { icon: Facebook, href: "https://www.facebook.com/people/MHK-Education-and-consultants/61556574771916/", label: "Facebook" },
+  // { icon: Twitter, href: "#", label: "Twitter" },
+  // { icon: Instagram, href: "#", label: "Instagram" },
+  // { icon: Linkedin, href: "#", label: "LinkedIn" },
 ];
 
 export default function Navigation() {
@@ -60,20 +60,24 @@ export default function Navigation() {
     <header className="fixed top-0 left-0 right-0 z-50">
       {/* Top Banner with Contact Info and Social Links */}
       <div className="bg-[#0F4C5C] text-white text-sm py-2">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+        <div className="container mx-auto px-4 py-1 flex justify-between items-center">
           {/* Contact Information */}
           <div className="flex items-center space-x-4">
             <div className="flex items-center">
               <Mail className="h-3 w-3 mr-1" />
               <span><a href="mailto:info@mhkeducationconsultant.com">info@mhkeducationconsultant.com</a></span>
             </div>
+
+
             <div className="hidden sm:flex items-center">
               <MapPin className="h-3 w-3 mr-1" />
-              <span>123 Business Ave, Suite 200, New York, NY</span>
+              <span>Sydney Australia</span>
             </div>
+
+
             <div className="hidden md:flex items-center">
               <Phone className="h-3 w-3 mr-1" />
-              <span>+91 1234567890</span>
+              <span> <a href="tel:+61 452 507 091">+61 452 507 091</a></span>
             </div>
           </div>
 
@@ -98,7 +102,7 @@ export default function Navigation() {
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-20 ">
+            <div className="w-80 ">
               {" "}
               <img
                 src="/logo.jpeg"
@@ -107,9 +111,6 @@ export default function Navigation() {
                 height={128}
               />{" "}
             </div>
-            {/* <span className="text-xl font-semibold text-[#0F4C5C]">
-              StartPro
-            </span> */}
           </Link>
 
           {/* Desktop Navigation Links */}
@@ -140,9 +141,11 @@ export default function Navigation() {
 
           {/* Call to Action Buttons */}
           <div className="flex items-center space-x-4">
+            <Link href="/contact">
             <Button className="hidden sm:inline-flex h-9 px-4 bg-[#0F4C5C] hover:bg-[#0F4C5C]/90 text-white rounded-full">
               Free consultation
             </Button>
+            </Link>
 
             {/* Mobile Menu Toggle */}
             <button

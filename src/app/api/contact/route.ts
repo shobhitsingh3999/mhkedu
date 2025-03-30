@@ -25,15 +25,26 @@ export async function POST(request: NextRequest) {
     }
 
     // Configure the email transporter
+    // const transporter = nodemailer.createTransport({
+    //   host: process.env.SMTP_HOST,
+    //   port: parseInt(process.env.SMTP_PORT || '587'),
+    //   secure: process.env.SMTP_SECURE === 'true',
+    //   auth: {
+    //     user: process.env.SMTP_USER,
+    //     pass: process.env.SMTP_PASSWORD,
+    //   },
+    // });
+
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
-      port: parseInt(process.env.SMTP_PORT || '587'),
-      secure: process.env.SMTP_SECURE === 'true',
+      port: 465, // Use 465 for secure
+      secure: true, // SSL/TLS
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASSWORD,
       },
     });
+    
 
     // Format the subject line
     const emailSubject = subject 

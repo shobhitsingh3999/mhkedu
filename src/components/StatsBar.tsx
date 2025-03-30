@@ -7,12 +7,12 @@ const stats = [
     icon: <FileCheck className="w-6 h-6 text-[#1A2B3C]/70" />,
   },
   {
-    value: "940+",
+    value: "450+",
     description: "Visa Applications",
     icon: <TrendingUp className="w-6 h-6 text-[#1A2B3C]/70" />,
   },
   {
-    value: "340+",
+    value: "450+",
     description: "Success Stories",
     icon: <Users className="w-6 h-6 text-[#1A2B3C]/70" />,
   },

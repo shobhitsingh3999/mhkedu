@@ -1,9 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
 import FooterSection from "@/components/FooterSection";
-import { ArrowRight, Check } from "lucide-react";
+import { Check } from "lucide-react";
+// import { ArrowRight, Check } from "lucide-react";
 import AnalysisSection from "@/components/AnalysisSection";
 
 export default function AboutPage() {
@@ -26,24 +27,21 @@ export default function AboutPage() {
             
             <div className="space-y-6 text-gray-700">
               <p>
-                Our journey began in 2014 with a vision to transform the study abroad experience for Indian students. What started as a small consulting office in Delhi has now grown into a trusted name in international education consultancy across the country.
+              Our story began with a simple yet powerful vision — to support students in unlocking global opportunities through education. What started as a small initiative has grown into a trusted consultancy, proudly based in Sydney, Australia, and serving students across the globe.
               </p>
               
               <p>
-                In our early days, we focused on providing visa assistance for students aspiring to study in Canada and Australia. As we witnessed the transformative impact of international education on our students lives, we expanded our services to include comprehensive counseling, university placements, and preparation for English proficiency tests like IELTS and PTE.
+              In the early stages, our focus was on providing accurate and transparent visa assistance. As we gained trust and witnessed the life-changing impact of international education, our services naturally expanded. Today, we offer end-to-end support — from personalized counseling and university placements to English proficiency test preparation and post-arrival guidance.
               </p>
               
               <p>
-                By 2018, we had established partnerships with over 100 prestigious universities across the globe, from the UK and Europe to the USA and New Zealand. Our alumni network grew exponentially, with success stories pouring in from students who found their dream careers abroad.
+              Backed by a team of highly experienced and Qualified Education Counsellors, many of whom have studied or worked internationally themselves, we bring firsthand knowledge and empathy to every student interaction. Our 95% visa grant success rate stands as a testament to our meticulous process and unwavering dedication.
               </p>
               
               <p>
-                Today, Abroad Dreams Consultant stands as a beacon of guidance for thousands of aspiring students. Our team of experienced counselors, most of whom have studied abroad themselves, brings firsthand knowledge and passion to every consultation. We have helped over 5,000 students achieve their international education goals, and we are just getting started.
+              Over the years, we have built strong relationships with top universities across countries like Australia, the UK, Canada, and the USA — and guided hundreds of students toward their academic and career goals abroad.
               </p>
               
-              <p>
-                As we look to the future, we remain committed to our founding principle: providing personalized, ethical guidance that puts students best interests at the heart of everything we do. Our journey continues, and we invite you to be part of our growing family of global achievers.
-              </p>
             </div>
           </div>
           
@@ -152,7 +150,7 @@ export default function AboutPage() {
 
 
       {/* Mission Section */}
-      <section className="py-32 bg-[#0F4C5C] relative overflow-hidden">
+      <section className="py-10 bg-[#0F4C5C] relative overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center relative z-10">
             <motion.h2 
@@ -170,7 +168,7 @@ export default function AboutPage() {
               transition={{ delay: 0.1 }}
               className="text-2xl text-white/80 mb-12 leading-relaxed"
             >
-              To empower businesses through innovative digital solutions that drive growth, enhance efficiency, and create lasting impact in an ever-evolving digital landscape.
+              to provide ethical, student-centric guidance that turns aspirations into achievements. Whether you’re just starting to explore study abroad options or ready to take the leap, we’re here to support you every step of the way.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -178,12 +176,12 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
             >
-              <Button
+              {/* <Button
                 className="bg-[#9FE870] hover:bg-[#9FE870]/90 text-[#0F4C5C] px-8 py-6 text-lg rounded-full group"
               >
                 Join Our Team
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-              </Button>
+              </Button> */}
             </motion.div>
           </div>
         </div>

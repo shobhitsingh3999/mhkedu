@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { GraduationCap, FileCheck, Globe, CheckCircle } from "lucide-react";
+import Link from "next/link";
 
 const features = [
   { name: "Study Abroad Made Easy" },
@@ -79,9 +80,11 @@ export default function FutureSection() {
             
             {/* Button outside the card */}
             <div className="mt-6 sm:mt-8">
+              <Link href="/contact">
               <Button className="h-10 sm:h-12 px-6 sm:px-8 bg-[#0F4C5C] hover:bg-[#0F4C5C]/90 text-white rounded-full text-sm sm:text-[15px] shadow-md">
                 Free consultation
               </Button>
+              </Link>
             </div>
           </div>
 
@@ -91,7 +94,7 @@ export default function FutureSection() {
               {/* Main Image Container */}
               <div className="relative w-full md:w-[85%] lg:w-[90%] h-[250px] sm:h-[300px] md:h-[400px] lg:h-[580px] rounded-xl sm:rounded-2xl overflow-hidden mx-auto lg:ml-0">
                 <Image
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2076"
+                  src="/images/girl.png"
                   alt="Professional woman"
                   fill
                   className="object-cover object-[center_25%]"

@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Globe, FileText, Compass } from "lucide-react";
+import { CheckCircle, Globe, FileText, Compass, } from "lucide-react";
+import Link from "next/link";
+
 
 const features = [
   {
@@ -56,9 +58,15 @@ export default function FeaturesSection() {
             <p className="text-gray-600 mb-8 text-lg">
               At MHK Consultants, we specialize in turning aspirations into achievements. With personalized guidance and expert solutions, we simplify your path to study, explore and thrive abroad.
             </p>
+
+            {/* <Link href="/contact"> */}
+            <Link href="/contact">
             <Button className="w-fit h-12 px-8 bg-[#0F4C5C] hover:bg-[#0F4C5C]/90 text-white rounded-full text-base shadow-lg transition-all duration-300 hover:shadow-xl">
               Consult Now!
             </Button>
+            </Link>
+            {/* </Link> */}
+
           </div>
 
           {/* Right side - Features Grid */}
