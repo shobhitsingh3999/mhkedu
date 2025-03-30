@@ -6,12 +6,9 @@ import FutureSection from "@/components/FutureSection";
 import StoriesSection from "@/components/StoriesSection";
 // import TestimonialsSection from "@/components/TestimonialsSection";
 import LocationsSection from "@/components/LocationsSection";
-import FooterSection from "@/components/FooterSection";
 import FlowlessProcessComponent from "@/components/flowless";
 import Review from "@/components/Review";
 import OurPartners from "@/components/ui/partner";
-
-
 
 export default function DemoPage() {
   return (
@@ -20,17 +17,11 @@ export default function DemoPage() {
       <HeroSection />
 
       {/* Stats Section */}
-        <StatsSection />
+      <StatsSection />
 
       {/* Features Section */}
       <FeaturesSection />
-
-      
-
-
-      <OurPartners/>
-      
-
+      <OurPartners />
       {/* Stats Bar Section */}
 
       {/* Locations Section */}
@@ -51,7 +42,7 @@ export default function DemoPage() {
 
       {/* Testimonials Section */}
       {/* <TestimonialsSection /> */}
-      <Review/>
+      <Review />
 
       {/* FAQ Section */}
       {/* <FAQSection /> */}
@@ -60,7 +51,6 @@ export default function DemoPage() {
       {/* <ContactSection /> */}
 
       {/* Footer Section */}
-      <FooterSection />
 
       {/* Additional sections can be added here */}
     </main>

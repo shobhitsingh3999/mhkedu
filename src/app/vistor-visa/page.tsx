@@ -1,11 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import {
-  CheckCircle,
-  Users,
-  FileText,
-  Clock,
-} from "lucide-react";
+import { CheckCircle, Users, FileText, Clock } from "lucide-react";
+import Link from "next/link";
 
 export default function VisitorVisaPage() {
   return (
@@ -26,12 +22,15 @@ export default function VisitorVisaPage() {
               Explore the World Hassle-Free
             </h1>
             <p className="text-lg md:text-xl text-white/80 mb-8">
-              Let our visa experts handle the paperwork while you plan your perfect journey.
-              Quick, reliable visa services for all your travel needs.
+              Let our visa experts handle the paperwork while you plan your
+              perfect journey. Quick, reliable visa services for all your travel
+              needs.
             </p>
+            <Link href="/contact">
             <Button className="bg-[#9FE870] hover:bg-[#9FE870]/90 text-[#0F4C5C] font-medium rounded-full h-12 px-8 text-lg">
               Free Consultation
             </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -93,31 +92,36 @@ export default function VisitorVisaPage() {
             Countries We Assist With
           </h2>
           <p className="text-center text-gray-700 max-w-3xl mx-auto mb-12">
-            We specialize in visitor visas for a range of destinations, including but not limited to:
+            We specialize in visitor visas for a range of destinations,
+            including but not limited to:
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
                 name: "Canada",
-                image: "https://cdn.pixabay.com/photo/2017/07/11/12/18/flag-2493360_1280.jpg",
+                image:
+                  "https://cdn.pixabay.com/photo/2017/07/11/12/18/flag-2493360_1280.jpg",
                 description:
                   "Experience the beauty of its landscapes and connect with loved ones.",
               },
               {
                 name: "Australia",
-                image: "https://cdn.pixabay.com/photo/2017/08/28/18/51/international-2690850_1280.jpg",
+                image:
+                  "https://cdn.pixabay.com/photo/2017/08/28/18/51/international-2690850_1280.jpg",
                 description:
                   "Evaluate your comprehension and interpretation of various texts.",
               },
               {
                 name: "UK",
-                image: "https://cdn.pixabay.com/photo/2019/03/21/12/51/brexit-4070957_1280.jpg",
+                image:
+                  "https://cdn.pixabay.com/photo/2019/03/21/12/51/brexit-4070957_1280.jpg",
                 description:
                   "Discover rich history and modern attractions in the United Kingdom.",
               },
               {
                 name: "Europe",
-                image: "https://cdn.pixabay.com/photo/2016/10/27/19/38/euro-flag-1776253_1280.jpg",
+                image:
+                  "https://cdn.pixabay.com/photo/2016/10/27/19/38/euro-flag-1776253_1280.jpg",
                 description:
                   "Visit multiple Schengen countries with one visa and enjoy a seamless European adventure.",
               },
@@ -163,8 +167,8 @@ export default function VisitorVisaPage() {
                 What We Offer
               </h2>
               <p className="text-gray-700 mb-8">
-                Our comprehensive visa services are designed to make your travel plans a reality
-                with minimal stress and maximum efficiency.
+                Our comprehensive visa services are designed to make your travel
+                plans a reality with minimal stress and maximum efficiency.
               </p>
               <ul className="space-y-4">
                 {[
@@ -253,7 +257,8 @@ export default function VisitorVisaPage() {
                 Essential Travel Tips
               </h2>
               <p className="text-gray-700 mb-8">
-                Making the most of your visitor visa and ensuring a smooth travel experience:
+                Making the most of your visitor visa and ensuring a smooth
+                travel experience:
               </p>
               <ul className="space-y-4">
                 {[
@@ -292,16 +297,18 @@ export default function VisitorVisaPage() {
               Ready to Start Your Journey?
             </h2>
             <p className="text-lg text-white/80 mb-8">
-              Contact our visa experts today for a free consultation and take the first step
-              toward your next great adventure.
+              Contact our visa experts today for a free consultation and take
+              the first step toward your next great adventure.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact">
               <Button className="bg-[#9FE870] hover:bg-[#9FE870]/90 text-[#0F4C5C] font-medium rounded-full h-12 px-8 text-lg">
                 Book a Consultation
               </Button>
-              <Button className="bg-transparent border-2 border-white hover:bg-white/10 text-white font-medium rounded-full h-12 px-8 text-lg">
+              </Link>
+              {/* <Button className="bg-transparent border-2 border-white hover:bg-white/10 text-white font-medium rounded-full h-12 px-8 text-lg">
                 View Success Stories
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>
@@ -317,12 +324,14 @@ export default function VisitorVisaPage() {
             <div className="space-y-6">
               {[
                 {
-                  question: "How long does the visitor visa application process take?",
+                  question:
+                    "How long does the visitor visa application process take?",
                   answer:
                     "Processing times vary by country and individual circumstances. Generally, it ranges from a few days to several weeks. We keep you informed about expected timeframes for your specific case.",
                 },
                 {
-                  question: "What documents are typically required for a visitor visa?",
+                  question:
+                    "What documents are typically required for a visitor visa?",
                   answer:
                     "Common requirements include a valid passport, completed application form, proof of travel purpose, accommodation details, financial proof, return ticket, and sometimes travel insurance. Specific requirements vary by destination.",
                 },
@@ -332,7 +341,8 @@ export default function VisitorVisaPage() {
                     "While we cannot guarantee approval as final decisions rest with immigration authorities, our expertise significantly improves your chances by ensuring applications are complete, accurate, and present your case in the best light.",
                 },
                 {
-                  question: "Do I need to attend an interview for every visitor visa?",
+                  question:
+                    "Do I need to attend an interview for every visitor visa?",
                   answer:
                     "Not all visitor visas require interviews. It depends on the destination country and sometimes your nationality or personal circumstances. We'll advise you if an interview is needed for your application.",
                 },

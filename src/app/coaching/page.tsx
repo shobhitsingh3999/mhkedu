@@ -63,10 +63,6 @@ export default function CoachingOptionsPage() {
               </button>
             </div>
 
-
-            <Button className="bg-[#9FE870] hover:bg-[#9FE870]/90 text-[#0F4C5C] font-medium rounded-full h-12 px-8 text-lg">
-              Book Free Demo Class
-            </Button>
           </div>
         </div>
       </section>
@@ -310,9 +306,6 @@ export default function CoachingOptionsPage() {
                   At Abroad Dreams Consultant, we&apos;re committed to your success. From personalized coaching 
                   to exam preparation strategies, we&apos;re here to guide you every step of the way.
                 </p>
-                <Button className="bg-[#9FE870] hover:bg-[#9FE870]/90 text-[#0F4C5C] font-medium rounded-full h-12 px-8 text-lg">
-                  Start Your IELTS Preparation
-                </Button>
               </div>
             </div>
           </section>
@@ -552,9 +545,6 @@ export default function CoachingOptionsPage() {
                   Join our expert-led PTE coaching program and take the first step toward achieving your
                   international education and career goals.
                 </p>
-                <Button className="bg-[#9FE870] hover:bg-[#9FE870]/90 text-[#0F4C5C] font-medium rounded-full h-12 px-8 text-lg">
-                  Begin Your PTE Journey
-                </Button>
               </div>
             </div>
           </section>
@@ -668,14 +658,6 @@ export default function CoachingOptionsPage() {
               Take the first step toward achieving your international education and career goals.
               Our expert coaches are ready to guide you to success.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-[#9FE870] hover:bg-[#9FE870]/90 text-[#0F4C5C] font-medium rounded-full h-12 px-8 text-lg">
-                Book a Demo Class
-              </Button>
-              <Button className="bg-transparent border-2 border-white hover:bg-white/10 text-white font-medium rounded-full h-12 px-8 text-lg">
-                Download Brochure
-              </Button>
-            </div>
           </div>
         </div>
         

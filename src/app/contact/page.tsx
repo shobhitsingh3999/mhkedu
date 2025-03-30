@@ -10,7 +10,6 @@ import {
   MapPin,
   Clock
 } from "lucide-react";
-import FooterSection from '@/components/FooterSection';
 
 
 // Define types for form data
@@ -457,8 +456,6 @@ export default function ContactUsPage() {
           </div>
         </div>
       </section> */}
-
-      <FooterSection />
     </div>
   );
 }

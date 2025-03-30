@@ -1,10 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-// import { Button } from "@/components/ui/button";
-import FooterSection from "@/components/FooterSection";
+import Image from "next/image";
 import { Check } from "lucide-react";
-// import { ArrowRight, Check } from "lucide-react";
 import AnalysisSection from "@/components/AnalysisSection";
 
 export default function AboutPage() {
@@ -49,12 +47,12 @@ export default function AboutPage() {
           <div className="relative h-[500px] md:h-[600px]">
             <div className="relative h-full w-full overflow-hidden rounded-lg shadow-xl">
               {/* Main image */}
-              {/* <Image
+              <Image
                 src="https://cdn.pixabay.com/photo/2024/01/22/22/09/map-8526430_1280.jpg"
                 alt="Our team's journey"
                 fill
                 className="object-cover"
-              /> */}
+              />
               
               {/* Decorative elements */}
               <div className="absolute inset-0 bg-gradient-to-t from-[#0F4C5C]/30 to-transparent"></div>
@@ -192,8 +190,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Footer Section */}
-      <FooterSection />
     </main>
   );
 } 

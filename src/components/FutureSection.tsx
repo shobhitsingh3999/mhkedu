@@ -103,16 +103,15 @@ export default function FutureSection() {
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/20"></div>
               </div>
 
-              {/* Connected Floating Cards - Responsive positioning */}
-              <div className="absolute top-1/2 transform -translate-y-1/2 right-0 sm:-right-4 md:-right-8 lg:-right-12 w-[90%] sm:w-[80%] md:w-[45%] lg:w-[40%] xl:w-[38%] flex flex-col">
+              {/* Modified Non-Overlapping Cards with spacing */}
+              <div className="absolute top-1/2 transform -translate-y-1/2 right-0 sm:-right-4 md:-right-8 lg:-right-12 w-[90%] sm:w-[80%] md:w-[45%] lg:w-[40%] xl:w-[38%] flex flex-col space-y-4 sm:space-y-5 md:space-y-6">
                 {cards.map((card, index) => (
                   <div 
                     key={index} 
                     className="rounded-lg sm:rounded-xl shadow-lg transition-all duration-300 overflow-hidden"
                     style={{
-                      marginTop: index === 0 ? '0' : '-0.5rem',
-                      zIndex: 10 - index,
                       backgroundColor: card.color,
+                      zIndex: 10 - index,
                     }}
                   >
                     <div className="p-3 sm:p-4 md:p-5 text-white">
@@ -126,10 +125,10 @@ export default function FutureSection() {
                         </div>
                       </div>
                       
-                      {/* Connector line to next card */}
+                      {/* Arrow connector between cards */}
                       {index < cards.length - 1 && (
-                        <div className="flex justify-center mt-2 sm:mt-4">
-                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 sm:w-6 sm:h-6">
+                        <div className="flex justify-center mt-2 sm:mt-3">
+                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 sm:w-5 sm:h-5">
                             <path d="M12 5L12 19M12 19L19 12M12 19L5 12" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                           </svg>
                         </div>
