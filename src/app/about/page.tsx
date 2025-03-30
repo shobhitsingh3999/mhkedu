@@ -50,7 +50,7 @@ export default function AboutPage() {
             <div className="relative h-full w-full overflow-hidden rounded-lg shadow-xl">
               {/* Main image */}
               {/* <Image
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071"
+                src="https://cdn.pixabay.com/photo/2024/01/22/22/09/map-8526430_1280.jpg"
                 alt="Our team's journey"
                 fill
                 className="object-cover"
@@ -90,17 +90,17 @@ export default function AboutPage() {
             </div>
             
             <div className="col-span-1 md:border-r border-gray-200 text-center p-4">
-              <h3 className="text-4xl md:text-5xl font-bold text-[#F6B84C]">940+</h3>
+              <h3 className="text-4xl md:text-5xl font-bold text-[#F6B84C]">450+</h3>
               <p className="text-[#0F4C5C] mt-2 text-sm md:text-base">Visa Applications</p>
             </div>
             
             <div className="col-span-1 md:border-r border-gray-200 text-center p-4">
-              <h3 className="text-4xl md:text-5xl font-bold text-[#F6B84C]">930+</h3>
+              <h3 className="text-4xl md:text-5xl font-bold text-[#F6B84C]">450+</h3>
               <p className="text-[#0F4C5C] mt-2 text-sm md:text-base">Approvals</p>
             </div>
             
             <div className="col-span-1 md:border-r border-gray-200 text-center p-4">
-              <h3 className="text-4xl md:text-5xl font-bold text-[#3D7A7A]">4.8</h3>
+              <h3 className="text-4xl md:text-5xl font-bold text-[#3D7A7A]">5</h3>
               <p className="text-[#0F4C5C] mt-2 text-sm md:text-base">Reviews</p>
             </div>
             
