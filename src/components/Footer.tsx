@@ -1,78 +1,79 @@
 "use client";
 
-import { Canvas } from "@react-three/fiber";
-import { Float, OrbitControls } from "@react-three/drei";
+// import { Canvas } from "@react-three/fiber";
+// import { Float, OrbitControls } from "@react-three/drei";
 import { motion } from "framer-motion";
 import { Facebook, Twitter, Instagram, Linkedin, Github } from "lucide-react";
 
 function Logo3D() {
   return (
-    <Canvas camera={{ position: [0, 0, 5], fov: 75 }}>
-      <ambientLight intensity={0.5} />
-      <pointLight position={[10, 10, 10]} />
-      <Float
-        speed={4}
-        rotationIntensity={1}
-        floatIntensity={2}
-      >
-        <group>
-          {/* Main torusKnot */}
-          <mesh scale={1.2}>
-            <torusKnotGeometry args={[0.8, 0.3, 128, 16]} />
-            <meshStandardMaterial
-              color="#4F46E5"
-              metalness={0.8}
-              roughness={0.2}
-            />
-          </mesh>
+    <></>
+    // <Canvas camera={{ position: [0, 0, 5], fov: 75 }}>
+    //   <ambientLight intensity={0.5} />
+    //   <pointLight position={[10, 10, 10]} />
+    //   <Float
+    //     speed={4}
+    //     rotationIntensity={1}
+    //     floatIntensity={2}
+    //   >
+    //     <group>
+    //       {/* Main torusKnot */}
+    //       <mesh scale={1.2}>
+    //         <torusKnotGeometry args={[0.8, 0.3, 128, 16]} />
+    //         <meshStandardMaterial
+    //           color="#4F46E5"
+    //           metalness={0.8}
+    //           roughness={0.2}
+    //         />
+    //       </mesh>
           
-          {/* Inner rotating sphere */}
-          <mesh scale={0.4}>
-            <sphereGeometry args={[1, 32, 32]} />
-            <meshStandardMaterial
-              color="#818CF8"
-              metalness={0.8}
-              roughness={0.2}
-              opacity={0.6}
-              transparent
-            />
-          </mesh>
+    //       {/* Inner rotating sphere */}
+    //       <mesh scale={0.4}>
+    //         <sphereGeometry args={[1, 32, 32]} />
+    //         <meshStandardMaterial
+    //           color="#818CF8"
+    //           metalness={0.8}
+    //           roughness={0.2}
+    //           opacity={0.6}
+    //           transparent
+    //         />
+    //       </mesh>
           
-          {/* Outer rotating rings */}
-          <group rotation={[Math.PI / 4, 0, 0]}>
-            <mesh scale={1.5}>
-              <torusGeometry args={[1, 0.1, 16, 32]} />
-              <meshStandardMaterial
-                color="#C7D2FE"
-                metalness={0.8}
-                roughness={0.2}
-                opacity={0.4}
-                transparent
-              />
-            </mesh>
-          </group>
+    //       {/* Outer rotating rings */}
+    //       <group rotation={[Math.PI / 4, 0, 0]}>
+    //         <mesh scale={1.5}>
+    //           <torusGeometry args={[1, 0.1, 16, 32]} />
+    //           <meshStandardMaterial
+    //             color="#C7D2FE"
+    //             metalness={0.8}
+    //             roughness={0.2}
+    //             opacity={0.4}
+    //             transparent
+    //           />
+    //         </mesh>
+    //       </group>
           
-          <group rotation={[0, Math.PI / 4, 0]}>
-            <mesh scale={1.6}>
-              <torusGeometry args={[1, 0.1, 16, 32]} />
-              <meshStandardMaterial
-                color="#6366F1"
-                metalness={0.8}
-                roughness={0.2}
-                opacity={0.3}
-                transparent
-              />
-            </mesh>
-          </group>
-        </group>
-      </Float>
-      <OrbitControls
-        enableZoom={false}
-        enablePan={false}
-        minPolarAngle={Math.PI / 2.5}
-        maxPolarAngle={Math.PI / 1.5}
-      />
-    </Canvas>
+    //       <group rotation={[0, Math.PI / 4, 0]}>
+    //         <mesh scale={1.6}>
+    //           <torusGeometry args={[1, 0.1, 16, 32]} />
+    //           <meshStandardMaterial
+    //             color="#6366F1"
+    //             metalness={0.8}
+    //             roughness={0.2}
+    //             opacity={0.3}
+    //             transparent
+    //           />
+    //         </mesh>
+    //       </group>
+    //     </group>
+    //   </Float>
+    //   <OrbitControls
+    //     enableZoom={false}
+    //     enablePan={false}
+    //     minPolarAngle={Math.PI / 2.5}
+    //     maxPolarAngle={Math.PI / 1.5}
+    //   />
+    // </Canvas>
   );
 }
 
