@@ -24,6 +24,7 @@ const navItems = [
   { label: "Coaching", href: "/coaching" },
   { label: "Visitor Visa", href: "/vistor-visa" },
   { label: "Contact Us", href: "/contact" },
+  { label: "Visa Grant", href: "/visa-grant" },
 ];
 
 const socialLinks = [
