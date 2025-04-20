@@ -155,10 +155,10 @@ export default function FooterSection() {
                   </svg>
                 </div>
                 <a
-                  href="tel:+61452507091"
+                  href="tel:0451635902"
                   className="ml-3 text-white/90 hover:text-[#F6B84C]"
                 >
-                  +61 452 507 091
+                  0451635902
                 </a>
               </li>
               <li className="flex items-center">

@@ -8,11 +8,11 @@ export default function OurPartners() {
       name: "Federation University",
       logo: "/patner/Tech brand.png"
     },
-    {
-      id: 2,
-      name: "Coventry University",
-      logo: "/patner/Tech brand (2).png"
-    },
+    // {
+    //   id: 2,
+    //   name: "Coventry University",
+    //   logo: "/patner/Tech brand (2).png"
+    // },
     {
       id: 3,
       name: "University of the West of England Bristol",
@@ -48,11 +48,11 @@ export default function OurPartners() {
       name: "MIT",
       logo: "/patner/Tech brand (9).png"
     },
-    {
-      id: 10,
-      name: "Princeton University",
-      logo: "/patner/Tech brand (10).png"
-    }
+    // {
+    //   id: 10,
+    //   name: "Princeton University",
+    //   logo: "/patner/Tech brand (10).png"
+    // }
   ];
 
   return (
@@ -109,26 +109,54 @@ export default function OurPartners() {
           </div>
           
           {/* Partners Grid with enhanced styling */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 md:gap-8">
-            {partners.map((partner) => (
-              <div 
-                key={partner.id} 
-                className="group flex items-center justify-center p-6 bg-white rounded-lg border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden"
-              >
+          
+          {/* <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 md:gap-8"> */}
+            {/* {partners.map((partner) => ( */}
+              {/* <div  */}
+                {/* key={partner.id}  */}
+                {/* className="group flex items-center justify-center p-6 bg-white rounded-lg border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden" */}
+              {/* > */}
                 {/* Hover effect background */}
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                {/* <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div> */}
                 
                 {/* Corner accent */}
-                <div className="absolute top-0 left-0 w-8 h-8 -translate-x-4 -translate-y-4 bg-blue-200 rounded-full opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
+                {/* <div className="absolute top-0 left-0 w-8 h-8 -translate-x-4 -translate-y-4 bg-blue-200 rounded-full opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div> */}
                 
-                <img 
-                  src={partner.logo} 
-                  alt={`${partner.name} logo`}
-                  className="max-h-16 max-w-full object-contain relative z-10 group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-            ))}
-          </div>
+                {/* <img  */}
+                  {/* src={partner.logo}  */}
+                  {/* alt={`${partner.name} logo`} */}
+                  {/* className="max-h-16 max-w-full object-contain relative z-10 group-hover:scale-105 transition-transform duration-300" */}
+                {/* /> */}
+              {/* </div> */}
+            {/* ))} */}
+          {/* </div> */}
+
+
+
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
+  {partners.map((partner) => (
+    <div
+      key={partner.id}
+      className="group flex items-center justify-center p-6 bg-white rounded-lg border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden"
+    >
+      {/* Hover effect background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+      
+      {/* Corner accent */}
+      <div className="absolute top-0 left-0 w-8 h-8 -translate-x-4 -translate-y-4 bg-blue-200 rounded-full opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
+      
+      <img
+        src={partner.logo}
+        alt={`${partner.name} logo`}
+        className="max-h-16 max-w-full object-contain relative z-10 group-hover:scale-105 transition-transform duration-300"
+      />
+    </div>
+  ))}
+</div>
+
+
+          
           
           {/* Bottom decoration */}
           <div className="flex justify-center mt-16">

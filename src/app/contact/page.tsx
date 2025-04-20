@@ -118,7 +118,7 @@ export default function ContactUsPage() {
     {
       icon: <Phone size={20} />,
       title: "Call Us",
-      info: "+61 452 507 091",
+      info: "0451635902",
       subInfo: "Mon-Fri from 9am to 6pm"
     },
     {

@@ -78,7 +78,7 @@ export default function Navigation() {
 
             <div className="hidden md:flex items-center">
               <Phone className="h-3 w-3 mr-1" />
-              <span> <a href="tel:+61 452 507 091">+61 452 507 091</a></span>
+              <span> <a href="tel:04516359021">0451635902</a></span>
             </div>
           </div>
 
