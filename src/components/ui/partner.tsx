@@ -28,16 +28,16 @@ export default function OurPartners() {
       name: "Cambridge University",
       logo: "/patner/Tech brand (5).png"
     },
-    {
-      id: 6,
-      name: "Imperial College London",
-      logo: "/patner/Tech brand (6).png"
-    },
-    {
-      id: 7,
-      name: "Harvard University",
-      logo: "/patner/Tech brand (7).png"
-    },
+    // {
+    //   id: 6,
+    //   name: "Imperial College London",
+    //   logo: "/patner/Tech brand (6).png"
+    // },
+    // {
+    //   id: 7,
+    //   name: "Harvard University",
+    //   logo: "/patner/Tech brand (7).png"
+    // },
     {
       id: 8,
       name: "Stanford University",
@@ -53,6 +53,11 @@ export default function OurPartners() {
     //   name: "Princeton University",
     //   logo: "/patner/Tech brand (10).png"
     // }
+     {
+      id: 11,
+      name: "Princeton University",
+      logo: "/patner/Tech brand (11).png"
+    }
   ];
 
   return (
@@ -134,25 +139,28 @@ export default function OurPartners() {
 
 
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
-  {partners.map((partner) => (
-    <div
-      key={partner.id}
-      className="group flex items-center justify-center p-6 bg-white rounded-lg border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden"
-    >
-      {/* Hover effect background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-      
-      {/* Corner accent */}
-      <div className="absolute top-0 left-0 w-8 h-8 -translate-x-4 -translate-y-4 bg-blue-200 rounded-full opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
-      
-      <img
-        src={partner.logo}
-        alt={`${partner.name} logo`}
-        className="max-h-16 max-w-full object-contain relative z-10 group-hover:scale-105 transition-transform duration-300"
-      />
-    </div>
-  ))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8 justify-items-center">
+  {/* Wrapper div for centering incomplete rows */}
+  <div className="col-span-full flex flex-wrap justify-center gap-6 md:gap-8">
+    {partners.map((partner) => (
+      <div
+        key={partner.id}
+        className="group flex items-center justify-center p-6 bg-white rounded-lg border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden w-full sm:w-64"
+      >
+        {/* Hover effect background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+        
+        {/* Corner accent */}
+        <div className="absolute top-0 left-0 w-8 h-8 -translate-x-4 -translate-y-4 bg-blue-200 rounded-full opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
+        
+        <img
+          src={partner.logo}
+          alt={`${partner.name} logo`}
+          className="max-h-16 max-w-full object-contain relative z-10 group-hover:scale-105 transition-transform duration-300"
+        />
+      </div>
+    ))}
+  </div>
 </div>
 
 
