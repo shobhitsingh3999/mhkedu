@@ -57,6 +57,11 @@ export default function OurPartners() {
       id: 11,
       name: "Princeton University",
       logo: "/patner/Tech brand (11).png"
+    },
+    {
+      id: 12,
+      name: "Princeton University",
+      logo: "/patner/Tech brand (12).png"
     }
   ];
 
