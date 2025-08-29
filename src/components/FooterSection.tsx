@@ -58,7 +58,7 @@ export default function FooterSection() {
                   href="/visa/canada"
                   className="text-white hover:text-[#0D7377] transition-colors"
                 >
-                  Study inCanada
+                  Study in Canada
                 </Link>
               </li>
               <li className="flex items-center">
@@ -85,7 +85,7 @@ export default function FooterSection() {
                   href="/visa/uk"
                   className="text-white hover:text-[#0D7377] transition-colors"
                 >
-                  Study inUK
+                  Study in UK
                 </Link>
               </li>
               <li className="flex items-center">
@@ -94,7 +94,7 @@ export default function FooterSection() {
                   href="/visa/europe"
                   className="text-white hover:text-[#0D7377] transition-colors"
                 >
-                  Study inEurope
+                  Study in Europe
                 </Link>
               </li>
               <li className="flex items-center">
@@ -114,6 +114,17 @@ export default function FooterSection() {
                 >
                   PTE
                 </Link>
+              </li>
+              <li className="flex items-center">
+                <span className="text-[#F6B84C] mr-2">›</span>
+                <a
+                  href="code-of-conduct-march-2022 (2).pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-[#F6B84C] transition-colors font-medium bg-[#0D7377]/20 px-2 py-1 rounded hover:bg-[#0D7377]/40"
+                >
+                  Code of Conduct
+                </a>
               </li>
             </ul>
           </div>
