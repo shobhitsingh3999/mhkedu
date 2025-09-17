@@ -10,6 +10,7 @@ import FooterSection from "@/components/FooterSection";
 import FlowlessProcessComponent from "@/components/flowless";
 import Review from "@/components/Review";
 import OurPartners from "@/components/ui/partner";
+import MigrationAgentSection from "@/components/ui/registation";
 
 
 
@@ -51,6 +52,7 @@ export default function DemoPage() {
 
       {/* Testimonials Section */}
       {/* <TestimonialsSection /> */}
+      <MigrationAgentSection />
       <Review/>
 
       {/* FAQ Section */}

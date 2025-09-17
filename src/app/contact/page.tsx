@@ -11,6 +11,7 @@ import {
   Clock
 } from "lucide-react";
 import FooterSection from '@/components/FooterSection';
+import CertificateSection from '@/components/ui/registation';
 
 
 // Define types for form data
@@ -457,6 +458,7 @@ export default function ContactUsPage() {
           </div>
         </div>
       </section> */}
+      <CertificateSection />
 
       <FooterSection />
     </div>
