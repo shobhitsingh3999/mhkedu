@@ -265,7 +265,7 @@ export default function CertificateSection() {
                       className="italic text-[#1A2B3C]"
                       style={{ fontFamily: '"Chronicle Display Black", serif' }}
                     >
-                      (MARN: 1575606)
+                      (MARN: 1574327)
                     </span>
                   </p>
                 </motion.div>
