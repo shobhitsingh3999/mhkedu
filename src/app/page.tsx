@@ -1,70 +1,33 @@
-import HeroSection from "@/components/HeroSection";
-import StatsSection from "@/components/StatsSection";
-import FeaturesSection from "@/components/FeaturesSection";
-import StatsBar from "@/components/StatsBar";
-import FutureSection from "@/components/FutureSection";
-import StoriesSection from "@/components/StoriesSection";
-// import TestimonialsSection from "@/components/TestimonialsSection";
-import LocationsSection from "@/components/LocationsSection";
-import FooterSection from "@/components/FooterSection";
-import FlowlessProcessComponent from "@/components/flowless";
-import Review from "@/components/Review";
-import OurPartners from "@/components/ui/partner";
-import MigrationAgentSection from "@/components/ui/registation";
+import { AlertTriangle } from "lucide-react";
 
-
-
-export default function DemoPage() {
+export default function Home() {
   return (
-    <main className="min-h-screen bg-white ">
-      {/* Hero Section */}
-      <HeroSection />
+    <main className="min-h-screen bg-[#f5f7fb] text-slate-900">
+      <section className="flex min-h-screen items-center justify-center px-6 py-12">
+        <div className="w-full max-w-2xl rounded-lg border border-slate-200 bg-white p-8 text-center shadow-sm sm:p-12">
+          <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-amber-100 text-amber-700">
+            <AlertTriangle className="h-8 w-8" aria-hidden="true" />
+          </div>
 
-      {/* Stats Section */}
-        <StatsSection />
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-amber-700">
+            Hosting Expired
+          </p>
 
-      {/* Features Section */}
-      <FeaturesSection />
+          <h1 className="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
+            This website is currently unavailable
+          </h1>
 
-      
+          <p className="mx-auto mt-5 max-w-xl text-base leading-7 text-slate-600">
+            The hosting plan for this website has expired. Access to all website
+            pages has been temporarily disabled until hosting is renewed.
+          </p>
 
-
-      <OurPartners/>
-      
-
-      {/* Stats Bar Section */}
-
-      {/* Locations Section */}
-
-      {/* Analysis Section */}
-      {/* <AnalysisSection /> */}
-      <LocationsSection />
-
-      {/* Future Section */}
-      <FutureSection />
-      <StatsBar />
-      <FlowlessProcessComponent />
-      {/* Stories Section */}
-      <StoriesSection />
-
-      {/* Case Studies Section */}
-      {/* <CaseStudiesSection /> */}
-
-      {/* Testimonials Section */}
-      {/* <TestimonialsSection /> */}
-      <MigrationAgentSection />
-      <Review/>
-
-      {/* FAQ Section */}
-      {/* <FAQSection /> */}
-
-      {/* Contact Section */}
-      {/* <ContactSection /> */}
-
-      {/* Footer Section */}
-      <FooterSection />
-
-      {/* Additional sections can be added here */}
+          <div className="mt-8 rounded-md border border-slate-200 bg-slate-50 px-5 py-4 text-sm text-slate-600">
+            Please contact the website owner or hosting administrator to restore
+            access.
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
