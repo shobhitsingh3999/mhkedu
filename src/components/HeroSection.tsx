@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import IasBadge from "@/components/IasBadge";
 
 export default function HeroSection() {
   return (
@@ -57,16 +58,25 @@ export default function HeroSection() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.15 }}
+            className="mt-3 md:mt-4 flex justify-center"
+          >
+            <IasBadge width={80} />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mt-6 md:mt-10 flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center"
+            className="mt-3 md:mt-5 flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center"
           >
             <Link href="/contact">
-            <Button 
+            <Button
               size="lg"
               className="w-full sm:w-auto h-12 md:h-14 px-6 md:px-8 text-base md:text-lg bg-[#9FE870] hover:bg-[#9FE870]/90 text-[#0F4C5C] font-medium rounded-full"
             >
               Free consultation
-              
+
             </Button>
             </Link>
             

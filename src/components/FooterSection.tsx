@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import IasBadge from "@/components/IasBadge";
 import { Facebook, Instagram, Youtube, ChevronUp } from "lucide-react";
 
 export default function FooterSection() {
@@ -193,6 +194,11 @@ export default function FooterSection() {
                 </a>
               </li>
             </ul>
+
+            {/* IAS Badge */}
+            <div className="mt-6 bg-white/95 inline-block rounded-md p-3">
+              <IasBadge width={140} />
+            </div>
 
             {/* Social Media Icons */}
             <div className="flex mt-6 gap-3">
