@@ -265,7 +265,7 @@ export default function CertificateSection() {
                       className="italic text-[#1A2B3C]"
                       style={{ fontFamily: '"Chronicle Display Black", serif' }}
                     >
-                      (MARN: 1576149)
+                      (MARN: 1574327)
                     </span>
                   </p>
                 </motion.div>
@@ -307,7 +307,7 @@ export default function CertificateSection() {
                   fill
                   className="object-contain"
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  src="/fixedmaralogo.png"
+                  src="/mara.png"
                   priority
                 />
               </motion.div>
